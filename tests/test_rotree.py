@@ -25,6 +25,17 @@ def test_parse_counts_and_names():
     assert "Gondwana" in names[301]
 
 
+def test_plate_names_drop_modelwide_boilerplate():
+    # a comment shared by >=10 plates is a citation, not a plate name
+    text = "\n".join(
+        f"{pid} 0.0 0.0 0.0 0.0 000 !Same Citation (2020)" for pid in range(101, 113)
+    )
+    text += "\n555 0.0 0.0 0.0 0.0 000 !Distinct Plate Name"
+    names = parse_rot(text).plate_names()
+    assert names[555] == "Distinct Plate Name"
+    assert 101 not in names
+
+
 def test_parent_of_interval_and_range():
     model = parse_rot(SAMPLE)
     assert model.parent_of(201, 100.0) == 101
@@ -48,6 +59,21 @@ def test_build_tree_structure():
     assert 999 not in ids
     lau = next(n for n in root.walk() if n.plate_id == 101)
     assert [c.plate_id for c in lau.children] == [201]
+
+
+def test_crossover_details_carry_annotations():
+    model = parse_rot(SAMPLE)
+    (x,) = model.crossover_details(201)
+    assert (x.time, x.old_fixed, x.new_fixed) == (700.0, 101, 301)
+    assert "crossover to Gondwana frame" in x.after.comment
+    assert x.before.line_number < x.after.line_number
+
+
+def test_segment_at():
+    model = parse_rot(SAMPLE)
+    seg = model.segment_at(201, 500.0)
+    assert seg is not None and seg.time == 400.0 and seg.fixed_plate == 101
+    assert model.segment_at(201, 900.0) is None
 
 
 def test_plot_smoke(tmp_path: Path):

@@ -37,6 +37,30 @@ class RotationLine:
         return self.moving_plate == 999
 
 
+@dataclass(frozen=True)
+class Crossover:
+    """One fixed-plate hand-off: the moving plate leaves ``before.fixed_plate``
+    for ``after.fixed_plate`` at ``after.time`` Ma.  The two rotation lines
+    carry the file's own annotations — typically the citation or reasoning
+    for the reference-frame choice."""
+
+    moving_plate: int
+    before: RotationLine
+    after: RotationLine
+
+    @property
+    def time(self) -> float:
+        return self.after.time
+
+    @property
+    def old_fixed(self) -> int:
+        return self.before.fixed_plate
+
+    @property
+    def new_fixed(self) -> int:
+        return self.after.fixed_plate
+
+
 @dataclass
 class RotationModel:
     """All rotation lines of one .rot file, indexed by moving plate."""
@@ -53,13 +77,22 @@ class RotationModel:
         return sorted(rows, key=lambda l: l.time)
 
     def plate_names(self) -> dict[int, str]:
-        """Best-effort plate names harvested from trailing comments."""
+        """Best-effort plate names harvested from trailing comments.
+
+        Comment text shared verbatim by ten or more plates is treated as a
+        model-wide annotation (typically a citation) rather than a plate
+        name and is dropped; it still surfaces in hover cards / crossover
+        details, which quote the raw line comments.
+        """
         names: dict[int, str] = {}
         for line in self.lines:
             text = _clean_comment(line.comment)
             if text and line.moving_plate not in names:
                 names[line.moving_plate] = text
-        return names
+        counts: dict[str, int] = {}
+        for text in names.values():
+            counts[text] = counts.get(text, 0) + 1
+        return {pid: text for pid, text in names.items() if counts[text] < 10}
 
     def parent_of(self, moving_plate: int, time: float) -> Optional[int]:
         """Fixed plate of ``moving_plate`` at ``time`` (Ma).
@@ -67,6 +100,30 @@ class RotationModel:
         Uses the fixed plate of the rotation interval that encloses ``time``.
         Returns None when the plate is not defined at that time.
         """
+        segment = self.segment_at(moving_plate, time)
+        return None if segment is None else segment.fixed_plate
+
+    def crossovers(self, moving_plate: int) -> list[tuple[float, int, int]]:
+        """(time, old_fixed, new_fixed) wherever the fixed plate changes."""
+        return [
+            (x.time, x.old_fixed, x.new_fixed)
+            for x in self.crossover_details(moving_plate)
+        ]
+
+    def crossover_details(self, moving_plate: int) -> list["Crossover"]:
+        """Every fixed-plate change of ``moving_plate``, with both rotation
+        lines around the hand-off so their comments (citations/annotations)
+        and .rot line numbers can be reported."""
+        rows = self.lines_for(moving_plate)
+        out: list[Crossover] = []
+        for a, b in zip(rows, rows[1:]):
+            if a.fixed_plate != b.fixed_plate:
+                out.append(Crossover(moving_plate=moving_plate, before=a, after=b))
+        return out
+
+    def segment_at(self, moving_plate: int, time: float) -> Optional[RotationLine]:
+        """The rotation line whose interval encloses ``time`` — i.e. the pole
+        that pins ``moving_plate`` to its fixed plate at that age."""
         rows = self.lines_for(moving_plate)
         if not rows:
             return None
@@ -78,16 +135,7 @@ class RotationModel:
                 chosen = row
             else:
                 break
-        return chosen.fixed_plate
-
-    def crossovers(self, moving_plate: int) -> list[tuple[float, int, int]]:
-        """(time, old_fixed, new_fixed) wherever the fixed plate changes."""
-        rows = self.lines_for(moving_plate)
-        out: list[tuple[float, int, int]] = []
-        for a, b in zip(rows, rows[1:]):
-            if a.fixed_plate != b.fixed_plate:
-                out.append((b.time, a.fixed_plate, b.fixed_plate))
-        return out
+        return chosen
 
 
 _LINE_RE = re.compile(
@@ -99,6 +147,7 @@ def _clean_comment(comment: str) -> str:
     text = comment.lstrip("!").strip()
     text = re.sub(r"^[A-Z]{2,4}[-_]", "", text)  # strip leading model tags like GTS-
     text = text.split("!")[0].strip()
+    text = text.split("@")[0].strip()  # drop trailing @citation tags from names
     return text
 
 
