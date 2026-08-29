@@ -11,6 +11,17 @@ reconstruction age, and renders it as a cladogram — so you can see at a
 glance how a model is wired, where plates re-parent through time
 (crossovers), and which plates never connect to the anchor.
 
+![Mollweide reconstruction of the Torsvik/Doubrovine 2012–2016 hybrid-frame model playing forward from 540 Ma to today, beside the rotree cladogram of the same model at the same age](docs/rotree_reconstruction.gif)
+
+*The Torsvik/Doubrovine 2012–2016 hybrid-frame model (Torsvik et al. 2012;
+CEED6 land polygons) playing forward from 540 Ma to today. Left: a
+pygplates + cartopy Mollweide reconstruction with each plate colored by its
+depth in the rotation tree. Right: the rotree cladogram of the same model,
+rebuilt at every age with the same depth palette — watch the tree deepen and
+re-wire as Pangea assembles and disperses. The banner lists the
+reference-frame hand-offs (crossovers) firing at each step. Regenerate with
+[docs/make_reconstruction_gif.py](docs/make_reconstruction_gif.py).*
+
 ## Install
 
 ```bash
@@ -37,6 +48,12 @@ rotree crossovers model.rot
 # plain-text view
 rotree tree model.rot --time 600
 ```
+
+![Cladogram of the extended Torsvik & Cocks (2017) model at 700 Ma](docs/example_extended_TC17_700Ma.png)
+
+*The extended Torsvik & Cocks (2017) model at 700 Ma: branches colored by
+depth, orange rings marking plates that re-parent at another age, and
+unreachable plates on the dotted orphans branch.*
 
 ## Python
 
