@@ -22,10 +22,16 @@ up as a color change on the map. Bottom: the Laurentia and Gondwana/Africa
 circuits as examples, each land-carrying plate a lineage against the shared
 time axis, colored by the same scheme through time; the cladogram grows with
 the moving cursor instead of re-arranging, and orange ticks mark the
-hand-offs (crossovers). A spaced-out version with every circuit is at
-[docs/rotree_reconstruction_full.gif](docs/rotree_reconstruction_full.gif);
-regenerate both with
+hand-offs (crossovers). Regenerate both versions with
 [docs/make_reconstruction_gif.py](docs/make_reconstruction_gif.py).*
+
+<details>
+<summary><b>Every circuit, spaced out</b> — the same animation with all eleven
+plate circuits on the timeline (click to expand)</summary>
+
+![The same animation with every plate circuit on the timeline, spaced out with labeled circuit blocks](docs/rotree_reconstruction_full.gif)
+
+</details>
 
 ## Install
 
