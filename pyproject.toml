@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Cladogram visualization of the plate-rotation hierarchy in any GPlates .rot file"
 readme = "README.md"
 license = {text = "MIT"}
-authors = [{name = "Swanson-Hysell Group"}]
+authors = [{name = "Institute for Rock Magnetism"}]
 requires-python = ">=3.9"
 dependencies = ["matplotlib>=3.5"]
 classifiers = [
@@ -20,7 +20,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Swanson-Hysell-Group/rotree"
+Homepage = "https://github.com/Institute-for-Rock-Magnetism/rotree"
 
 [project.scripts]
 rotree = "rotree.cli:main"

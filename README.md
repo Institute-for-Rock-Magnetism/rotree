@@ -36,7 +36,7 @@ plate circuits on the timeline (click to expand)</summary>
 ## Install
 
 ```bash
-pip install git+https://github.com/Swanson-Hysell-Group/rotree.git
+pip install git+https://github.com/Institute-for-Rock-Magnetism/rotree.git
 ```
 
 ## Command line
@@ -153,4 +153,4 @@ span, kind, reference, note — flagging those active at the plotted age.
 
 ## License
 
-MIT — Swanson-Hysell Group, University of Minnesota.
+MIT — Institute for Rock Magnetism, University of Minnesota.
