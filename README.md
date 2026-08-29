@@ -18,10 +18,13 @@ CEED6 land polygons) playing forward from 540 Ma to today. Top: a
 pygplates + cartopy Mollweide reconstruction, each plate colored by its
 circuit — the nearest anchor plate (Laurentia, Gondwana, Siberia, …) up the
 rotation-tree parent chain at that age, so a reference-frame hand-off shows
-up as a color change on the map. Bottom: every land-carrying plate as a
-lineage against the shared time axis, colored by the same scheme through
-time; the cladogram grows with the moving cursor instead of re-arranging,
-and orange ticks mark the hand-offs (crossovers). Regenerate with
+up as a color change on the map. Bottom: the Laurentia and Gondwana/Africa
+circuits as examples, each land-carrying plate a lineage against the shared
+time axis, colored by the same scheme through time; the cladogram grows with
+the moving cursor instead of re-arranging, and orange ticks mark the
+hand-offs (crossovers). A spaced-out version with every circuit is at
+[docs/rotree_reconstruction_full.gif](docs/rotree_reconstruction_full.gif);
+regenerate both with
 [docs/make_reconstruction_gif.py](docs/make_reconstruction_gif.py).*
 
 ## Install

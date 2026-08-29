@@ -137,24 +137,29 @@ def lineage_runs(index, pids, grid_step=2.0):
 def row_order(index, model, pids, group_gap=3.0):
     """Stable row positions: grouped by circuit at youngest age (with a
     blank gap between circuits), cascading in by age of first appearance.
-    Returns (pid -> y, total y extent)."""
+    Returns (pid -> y, group blocks [(name, color, y_lo, y_hi)], extent)."""
 
-    order = [c[1] for c in CIRCUITS.values()] + [UNGROUPED]
+    palette = [(n, c) for n, c in CIRCUITS.values()] + [("other", UNGROUPED)]
+    order = [c for _, c in palette]
 
     def key(pid):
         oldest, youngest = index.span(pid)
         color = index.circuit_color(pid, youngest)
         return (order.index(color), -oldest, pid)
 
-    rows, y, prev_group = {}, 0.0, None
+    rows, blocks, y, prev_group = {}, [], 0.0, None
     for pid in sorted(pids, key=key):
         group = key(pid)[0]
-        if prev_group is not None and group != prev_group:
-            y += group_gap
+        if prev_group is None or group != prev_group:
+            if prev_group is not None:
+                y += group_gap
+            name, color = palette[group]
+            blocks.append([name, color, y, y])
         rows[pid] = y
+        blocks[-1][3] = y
         y += 1.0
         prev_group = group
-    return rows, y
+    return rows, [tuple(b) for b in blocks], y
 
 
 def draw_map(ax, reconstructed, wrapper, index, time):
@@ -191,18 +196,37 @@ def draw_map(ax, reconstructed, wrapper, index, time):
             )
 
 
-def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
+def draw_timeline(ax, rows, blocks, runs, handoffs, time, extent, lw):
     ax.set_facecolor("#FBFCFD")
+    headroom = extent * 1.08 + 2
     for old, young, label in ERAS:
-        ax.axvspan(old, young, color="#F0F3F6" if label != "Mesozoic" else "#F6F3EC", zorder=0)
+        ax.axvspan(
+            old,
+            young,
+            color="#F0F3F6" if label != "Mesozoic" else "#F6F3EC",
+            zorder=0,
+        )
         ax.text(
             (old + young) / 2,
-            n_rows * 1.065,
+            headroom,
             label,
             ha="center",
             va="top",
             fontsize=8,
             color=MUTED,
+        )
+    for name, color, y_lo, y_hi in blocks:
+        ax.text(
+            T_START + 4,
+            (y_lo + y_hi) / 2,
+            name,
+            ha="left",
+            va="center",
+            fontsize=8,
+            fontweight="bold",
+            color=color,
+            zorder=5,
+            bbox=dict(facecolor="white", edgecolor="none", alpha=0.75, pad=1.5),
         )
     segments, colors = [], []
     for pid, y in rows.items():
@@ -212,17 +236,15 @@ def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
             segments.append([(t_old, y), (max(t_young, time), y)])
             colors.append(color)
     ax.add_collection(
-        LineCollection(segments, colors=colors, linewidths=0.9, zorder=2)
+        LineCollection(segments, colors=colors, linewidths=lw, zorder=2)
     )
     fired = [(t, rows[pid]) for pid, t in handoffs if t >= time and pid in rows]
     if fired:
         xs, ys = zip(*fired)
-        ax.plot(
-            xs, ys, "|", ms=5, mew=1.2, color=CURSOR, zorder=3, ls="none"
-        )
+        ax.plot(xs, ys, "|", ms=5, mew=1.2, color=CURSOR, zorder=3, ls="none")
     ax.axvline(time, color=CURSOR, lw=1.0, zorder=4)
     ax.set_xlim(T_START + 8, -8)
-    ax.set_ylim(-4, n_rows * 1.08)
+    ax.set_ylim(-3, headroom + 1)
     ax.set_yticks([])
     ax.tick_params(axis="x", labelsize=8, colors=MUTED)
     for spine in ("left", "right", "top"):
@@ -230,7 +252,17 @@ def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
     ax.spines["bottom"].set_color(MUTED)
 
 
-def main() -> None:
+def build(
+    out: Path,
+    circuit_filter=None,
+    t_step=T_STEP,
+    frame_ms=FRAME_MS,
+    slot_in=0.10,
+    lw=1.6,
+) -> None:
+    """Render one GIF. ``circuit_filter``: anchor plate ids whose circuits
+    the timeline shows (None = all); the map always stays global.
+    ``slot_in`` is the vertical space (inches) per lineage row."""
     model = parse_rot(ROT)
     index = ParentIndex(model)
     features = pygplates.FeatureCollection(str(POLY))
@@ -244,20 +276,38 @@ def main() -> None:
             if f.get_reconstruction_plate_id() in index.table
         }
     )
-    rows, y_extent = row_order(index, model, land_pids)
+    if circuit_filter is not None:
+        wanted = {CIRCUITS[a][1] for a in circuit_filter}
+        land_pids = [
+            pid
+            for pid in land_pids
+            if index.circuit_color(pid, index.span(pid)[1]) in wanted
+        ]
+    rows, blocks, extent = row_order(index, model, land_pids)
     runs = lineage_runs(index, land_pids)
     handoffs = [
         (pid, x.time) for pid in land_pids for x in model.crossover_details(pid)
     ]
 
-    times = list(np.arange(T_START, -1e-9, -T_STEP)) + [0.0]
+    # size the figure so every lineage row gets slot_in inches
+    width = 10.8
+    map_h, legend_h, tl_h = 4.4, 0.5, max(2.2, extent * slot_in)
+    margin_top, margin_bot = 0.4, 0.55
+    height = margin_top + map_h + legend_h + tl_h + margin_bot
+    tl_frac = tl_h / height
+    map_y0 = (margin_bot + tl_h + legend_h) / height
+    legend_y = (margin_bot + tl_h + 0.08) / height
+
+    times = list(np.arange(T_START, -1e-9, -t_step)) + [0.0]
     times = sorted(set(round(t, 3) for t in times), reverse=True)
 
     frames = []
     for i, time in enumerate(times):
-        fig = plt.figure(figsize=(10.8, 11.4), dpi=88)
-        ax_map = fig.add_axes([0.10, 0.615, 0.80, 0.36], projection=ccrs.Mollweide())
-        ax_tl = fig.add_axes([0.06, 0.045, 0.88, 0.525])
+        fig = plt.figure(figsize=(width, height), dpi=88)
+        ax_map = fig.add_axes(
+            [0.10, map_y0, 0.80, map_h / height], projection=ccrs.Mollweide()
+        )
+        ax_tl = fig.add_axes([0.06, margin_bot / height, 0.88, tl_frac])
 
         reconstructed = []
         pygplates.reconstruct(features, rotation_model, reconstructed, time)
@@ -268,14 +318,14 @@ def main() -> None:
             fontsize=11,
             color=INK,
         )
-        draw_timeline(ax_tl, rows, runs, handoffs, time, y_extent)
+        draw_timeline(ax_tl, rows, blocks, runs, handoffs, time, extent, lw)
         fig.legend(
             handles=[
                 plt.Line2D([], [], color=c, lw=4, label=n)
                 for n, c in CIRCUITS.values()
             ],
             loc="lower center",
-            bbox_to_anchor=(0.5, 0.578),
+            bbox_to_anchor=(0.5, legend_y),
             ncol=6,
             frameon=False,
             fontsize=7,
@@ -283,14 +333,21 @@ def main() -> None:
             columnspacing=1.2,
             labelcolor=MUTED,
         )
-        fig.text(
-            0.5,
-            0.008,
+        caption = (
             "age in Ma, time flowing toward the present · each line = one "
             "land-carrying plate · color = nearest circuit anchor in the "
-            "rotation tree · orange ticks = reference-frame hand-offs "
-            "(crossovers)",
+            "rotation tree\norange ticks = reference-frame hand-offs "
+            "(crossovers)"
+        )
+        if circuit_filter is not None:
+            shown = " and ".join(CIRCUITS[a][0] for a in sorted(circuit_filter))
+            caption += f" · timeline shows the {shown} circuits as examples"
+        fig.text(
+            0.5,
+            0.10 / height,
+            caption,
             ha="center",
+            va="bottom",
             fontsize=8,
             color=MUTED,
         )
@@ -302,20 +359,28 @@ def main() -> None:
             ).convert("P", palette=Image.ADAPTIVE, colors=128)
         )
         plt.close(fig)
-        if i % 10 == 0 or time == 0:
+        if i % 20 == 0 or time == 0:
             print(f"frame {i + 1}/{len(times)}: {time:g} Ma", flush=True)
 
-    durations = [FRAME_MS] * len(frames)
+    durations = [frame_ms] * len(frames)
     durations[-1] = END_HOLD_MS
     frames[0].save(
-        OUT,
+        out,
         save_all=True,
         append_images=frames[1:],
         duration=durations,
         loop=0,
         optimize=True,
     )
-    print(f"wrote {OUT} ({OUT.stat().st_size / 1e6:.1f} MB)")
+    print(f"wrote {out} ({out.stat().st_size / 1e6:.1f} MB)")
+
+
+def main() -> None:
+    # README GIF: two example circuits, roomy rows, smooth 4 Ma steps
+    build(OUT, circuit_filter={101, 701}, slot_in=0.10, lw=1.6)
+    # companion: every circuit, spaced for legibility, coarser steps
+    full = OUT.with_name(OUT.stem + "_full" + OUT.suffix)
+    build(full, circuit_filter=None, t_step=8, frame_ms=170, slot_in=0.055, lw=1.1)
 
 
 if __name__ == "__main__":
