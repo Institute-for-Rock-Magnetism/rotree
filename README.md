@@ -11,15 +11,17 @@ reconstruction age, and renders it as a cladogram — so you can see at a
 glance how a model is wired, where plates re-parent through time
 (crossovers), and which plates never connect to the anchor.
 
-![Mollweide reconstruction of the Torsvik/Doubrovine 2012–2016 hybrid-frame model playing forward from 540 Ma to today, beside the rotree cladogram of the same model at the same age](docs/rotree_reconstruction.gif)
+![Mollweide reconstruction of the Torsvik/Doubrovine 2012–2016 hybrid-frame model playing forward from 540 Ma to today, above a time-axis cladogram of the same model revealed in step with the map](docs/rotree_reconstruction.gif)
 
 *The Torsvik/Doubrovine 2012–2016 hybrid-frame model (Torsvik et al. 2012;
-CEED6 land polygons) playing forward from 540 Ma to today. Left: a
-pygplates + cartopy Mollweide reconstruction with each plate colored by its
-depth in the rotation tree. Right: the rotree cladogram of the same model,
-rebuilt at every age with the same depth palette — watch the tree deepen and
-re-wire as Pangea assembles and disperses. The banner lists the
-reference-frame hand-offs (crossovers) firing at each step. Regenerate with
+CEED6 land polygons) playing forward from 540 Ma to today. Top: a
+pygplates + cartopy Mollweide reconstruction, each plate colored by its
+circuit — the nearest anchor plate (Laurentia, Gondwana, Siberia, …) up the
+rotation-tree parent chain at that age, so a reference-frame hand-off shows
+up as a color change on the map. Bottom: every land-carrying plate as a
+lineage against the shared time axis, colored by the same scheme through
+time; the cladogram grows with the moving cursor instead of re-arranging,
+and orange ticks mark the hand-offs (crossovers). Regenerate with
 [docs/make_reconstruction_gif.py](docs/make_reconstruction_gif.py).*
 
 ## Install

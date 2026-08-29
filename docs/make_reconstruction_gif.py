@@ -1,17 +1,20 @@
 """Build the README demo GIF: a Mollweide global reconstruction playing
-forward through the Phanerozoic, side by side with the rotree cladogram
-of the same rotation model at the same age.
+forward through the Phanerozoic above a time-axis cladogram that reveals
+itself in step with the map.
 
-Left panel: continental polygons reconstructed with pygplates and colored
-by each plate's depth in the rotation tree (levels from the anchor) —
-the same palette the cladogram uses, so the two panels read together.
-Right panel: the rotree cladogram skeleton, re-built at every age, with
-hand-offs (crossovers) that fire between frames flagged in the banner.
+Top row: continental polygons reconstructed with pygplates at the current
+age, colored by major plate circuit — the nearest anchor plate (Laurentia,
+Gondwana, Siberia, ...) up the rotation-tree parent chain at that age, so
+a reference-frame hand-off (crossover) shows up as a color change.
+Bottom row: every land-carrying plate as a lineage line against a shared
+time axis, colored by the same circuit scheme through time. Lineages are
+drawn only up to the current age, so the cladogram grows continuously as
+the animation advances instead of re-laying-out each frame; orange ticks
+mark hand-offs, and a cursor ties both rows to the same instant.
 
-Requires: pygplates, cartopy, shapely, pillow (none are rotree deps —
-this is a docs-only script). Paths below point at local copies of the
-Torsvik/Doubrovine 2012-2016 hybrid frame (CEED) and the CEED6 land
-polygons; adjust to your own copies to regenerate.
+Requires: pygplates, cartopy, numpy, pillow (docs-only, not rotree deps).
+Default paths point at local copies of the Torsvik/Doubrovine 2012-2016
+hybrid frame (CEED) and the CEED6 land polygons.
 
 Usage::
 
@@ -21,6 +24,7 @@ Usage::
 from __future__ import annotations
 
 import sys
+from bisect import bisect_right
 from pathlib import Path
 
 import matplotlib
@@ -30,11 +34,11 @@ import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
 import numpy as np
 import pygplates
+from matplotlib.collections import LineCollection
 from matplotlib.patches import Polygon as MplPolygon
 from PIL import Image
 
-from rotree import build_tree, parse_rot
-from rotree.plot import _DEPTH_COLORS, _MUTED_COLOR, plot_cladogram
+from rotree import parse_rot
 
 ROT = Path(
     sys.argv[1]
@@ -50,47 +54,106 @@ POLY = Path(
 )
 OUT = Path(sys.argv[3] if len(sys.argv) > 3 else "docs/rotree_reconstruction.gif")
 
-TIMES = list(range(540, -1, -20))  # 540 Ma -> today
-FRAME_MS = 500
+T_START, T_STEP = 540, 4  # Ma; forward toward the present
+FRAME_MS = 90
 END_HOLD_MS = 2500
-ORPHAN_GREY = "#B9C2CA"
+
+# major plate circuits: nearest of these up the parent chain sets the color
+CIRCUITS = {
+    101: ("Laurentia", "#4E79A7"),
+    201: ("S America", "#F28E2B"),
+    301: ("Eurasia", "#59A14F"),
+    302: ("Baltica", "#8CD17D"),
+    401: ("Siberia", "#E15759"),
+    501: ("India", "#B07AA1"),
+    601: ("S China", "#EDC948"),
+    701: ("Gondwana/Africa", "#9C755F"),
+    801: ("Australia", "#FF9DA7"),
+    802: ("Antarctica", "#76B7B2"),
+    901: ("Pacific", "#A0CBE8"),
+}
+UNGROUPED = "#B9C2CA"
+OCEAN = "#DCEAF2"
+CURSOR = "#C1441E"
+INK = "#26313B"
+MUTED = "#7C8894"
+ERAS = [(541, 252, "Paleozoic"), (252, 66, "Mesozoic"), (66, 0, "Cenozoic")]
 
 
-def plate_depths(root) -> dict[int, int]:
-    """plate id -> levels from the anchor, at one age."""
-    depths: dict[int, int] = {}
+class ParentIndex:
+    """Fast parent-at-age lookups over a parsed rotation model."""
 
-    def walk(node, depth):
-        if node.plate_id >= 0:
-            depths[node.plate_id] = depth
-        for child in node.children:
-            walk(child, depth + (0 if node.plate_id < 0 else 1))
+    def __init__(self, model):
+        self.table = {}
+        for pid in model.moving_plates:
+            rows = model.lines_for(pid)
+            self.table[pid] = (
+                [r.time for r in rows],
+                [r.fixed_plate for r in rows],
+            )
 
-    walk(root, 0)
-    return depths
+    def parent(self, pid, t):
+        entry = self.table.get(pid)
+        if entry is None:
+            return None
+        times, fixed = entry
+        if t < times[0] - 1e-9 or t > times[-1] + 1e-9:
+            return None
+        return fixed[max(0, bisect_right(times, t + 1e-9) - 1)]
+
+    def circuit_color(self, pid, t):
+        """Color of the nearest circuit anchor up the chain at age t."""
+        seen = set()
+        cur = pid
+        while cur is not None and cur not in seen:
+            if cur in CIRCUITS:
+                return CIRCUITS[cur][1]
+            seen.add(cur)
+            cur = self.parent(cur, t)
+        return UNGROUPED
+
+    def span(self, pid):
+        times = self.table[pid][0]
+        return times[-1], times[0]  # oldest, youngest
 
 
-def draw_map(ax, features, rotation_model, wrapper, time, depths):
-    """Fill reconstructed land polygons, colored by rotation-tree depth.
+def lineage_runs(index, pids, grid_step=2.0):
+    """Per plate: contiguous same-color runs [(t_old, t_young, color)]."""
+    runs = {}
+    for pid in pids:
+        oldest, youngest = index.span(pid)
+        ts = np.arange(oldest, youngest - 1e-6, -grid_step).tolist() + [youngest]
+        out = []
+        for t in ts:
+            c = index.circuit_color(pid, t)
+            if out and out[-1][2] == c:
+                out[-1][1] = t
+            else:
+                out.append([t, t, c])
+        runs[pid] = [(a, b, c) for a, b, c in out]
+    return runs
 
-    Rings are dateline-wrapped and pole-closed by pygplates, then their
-    vertices are projected directly to Mollweide coordinates and drawn as
-    plain patches — sidestepping map-library polygon cutting, which can
-    invert thin slivers into globe-covering fills.
-    """
+
+def row_order(index, model, pids):
+    """Stable row order: group by circuit at youngest age, then by the
+    plate's oldest appearance so lineages cascade in as time advances."""
+
+    def key(pid):
+        oldest, youngest = index.span(pid)
+        color = index.circuit_color(pid, youngest)
+        order = [c[1] for c in CIRCUITS.values()] + [UNGROUPED]
+        return (order.index(color), -oldest, pid)
+
+    return {pid: i for i, pid in enumerate(sorted(pids, key=key))}
+
+
+def draw_map(ax, reconstructed, wrapper, index, time):
     ax.set_global()
-    ax.set_facecolor("#E9F1F6")
+    ax.set_facecolor(OCEAN)
     moll, geo = ax.projection, ccrs.PlateCarree()
-    reconstructed = []
-    pygplates.reconstruct(features, rotation_model, reconstructed, time)
     for rec in reconstructed:
         pid = rec.get_feature().get_reconstruction_plate_id()
-        depth = depths.get(pid)
-        color = (
-            ORPHAN_GREY
-            if depth is None
-            else _DEPTH_COLORS[depth % len(_DEPTH_COLORS)]
-        )
+        color = index.circuit_color(pid, time)
         geom = rec.get_reconstructed_geometry()
         if not isinstance(geom, pygplates.PolygonOnSphere):
             continue
@@ -118,78 +181,120 @@ def draw_map(ax, features, rotation_model, wrapper, time, depths):
             )
 
 
+def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
+    ax.set_facecolor("#FBFCFD")
+    for old, young, label in ERAS:
+        ax.axvspan(old, young, color="#F0F3F6" if label != "Mesozoic" else "#F6F3EC", zorder=0)
+        ax.text(
+            (old + young) / 2,
+            n_rows * 1.035,
+            label,
+            ha="center",
+            va="top",
+            fontsize=8,
+            color=MUTED,
+        )
+    segments, colors = [], []
+    for pid, y in rows.items():
+        for t_old, t_young, color in runs[pid]:
+            if t_old <= time:
+                continue
+            segments.append([(t_old, y), (max(t_young, time), y)])
+            colors.append(color)
+    ax.add_collection(
+        LineCollection(segments, colors=colors, linewidths=0.55, zorder=2)
+    )
+    fired = [(t, rows[pid]) for pid, t in handoffs if t >= time and pid in rows]
+    if fired:
+        xs, ys = zip(*fired)
+        ax.plot(
+            xs, ys, "|", ms=4, mew=1.1, color=CURSOR, zorder=3, ls="none"
+        )
+    ax.axvline(time, color=CURSOR, lw=1.0, zorder=4)
+    ax.set_xlim(T_START + 8, -8)
+    ax.set_ylim(-4, n_rows * 1.04)
+    ax.set_yticks([])
+    ax.set_xlabel("Age (Ma)", fontsize=9, color=MUTED)
+    ax.tick_params(axis="x", labelsize=8, colors=MUTED)
+    for spine in ("left", "right", "top"):
+        ax.spines[spine].set_visible(False)
+    ax.spines["bottom"].set_color(MUTED)
+
+
 def main() -> None:
     model = parse_rot(ROT)
+    index = ParentIndex(model)
     features = pygplates.FeatureCollection(str(POLY))
     rotation_model = pygplates.RotationModel(str(ROT))
     wrapper = pygplates.DateLineWrapper(0.0)
 
+    land_pids = sorted(
+        {
+            f.get_reconstruction_plate_id()
+            for f in features
+            if f.get_reconstruction_plate_id() in index.table
+        }
+    )
+    rows = row_order(index, model, land_pids)
+    runs = lineage_runs(index, land_pids)
+    handoffs = [
+        (pid, x.time) for pid in land_pids for x in model.crossover_details(pid)
+    ]
+    n_rows = len(rows)
+
+    times = list(np.arange(T_START, -1e-9, -T_STEP)) + [0.0]
+    times = sorted(set(round(t, 3) for t in times), reverse=True)
+
     frames = []
-    for i, time in enumerate(TIMES):
-        root = build_tree(model, time=time)
-        depths = plate_depths(root)
+    for i, time in enumerate(times):
+        fig = plt.figure(figsize=(10.8, 7.4), dpi=88)
+        ax_map = fig.add_axes([0.06, 0.40, 0.88, 0.55], projection=ccrs.Mollweide())
+        ax_tl = fig.add_axes([0.06, 0.075, 0.88, 0.27])
 
-        fig = plt.figure(figsize=(13.2, 5.6), dpi=100)
-        ax_map = fig.add_axes(
-            [0.015, 0.06, 0.56, 0.82], projection=ccrs.Mollweide()
-        )
-        ax_tree = fig.add_axes([0.615, 0.06, 0.37, 0.82])
-
-        draw_map(ax_map, features, rotation_model, wrapper, time, depths)
+        reconstructed = []
+        pygplates.reconstruct(features, rotation_model, reconstructed, time)
+        draw_map(ax_map, reconstructed, wrapper, index, time)
         ax_map.set_title(
-            f"{time} Ma — Torsvik/Doubrovine 2012–2016 hybrid frame (CEED6 land)",
+            f"{time:g} Ma — Torsvik/Doubrovine 2012–2016 hybrid frame, "
+            "colored by plate circuit",
             fontsize=11,
+            color=INK,
         )
-
-        plot_cladogram(
-            model,
-            time=time,
-            ax=ax_tree,
-            show_labels=False,
-            mark_crossovers=False,
+        draw_timeline(ax_tl, rows, runs, handoffs, time, n_rows)
+        fig.legend(
+            handles=[
+                plt.Line2D([], [], color=c, lw=4, label=n)
+                for n, c in CIRCUITS.values()
+            ],
+            loc="lower center",
+            bbox_to_anchor=(0.5, 0.345),
+            ncol=6,
+            frameon=False,
+            fontsize=7,
+            handlelength=1.2,
+            columnspacing=1.2,
+            labelcolor=MUTED,
         )
-        ax_tree.set_title(
-            f"rotree: plate hierarchy at {time} Ma "
-            f"({root.n_leaves} leaves, depth {root.depth})",
-            fontsize=11,
-        )
-        ax_tree.set_xlim(-0.5, 17)  # fixed frame so the tree doesn't jump
-        ax_tree.set_xlabel("")  # the banner below explains the x-axis
-
-        # hand-offs firing since the previous frame -> banner text
-        prev = TIMES[i - 1] if i else None
-        fired = [
-            (p, t, old, new)
-            for p in model.moving_plates
-            for (t, old, new) in model.crossovers(p)
-            if prev is not None and time <= t < prev
-        ]
-        if fired:
-            shown = ", ".join(
-                f"{p}: {old}→{new}" for p, t, old, new in fired[:6]
-            )
-            more = f"  (+{len(fired) - 6} more)" if len(fired) > 6 else ""
-            banner = f"reference-frame hand-offs this step — {shown}{more}"
-        else:
-            banner = "no reference-frame hand-offs this step"
         fig.text(
             0.5,
-            0.015,
-            banner
-            + "   |   map colors = levels from anchor plate (cladogram x-axis)",
+            0.012,
+            "each line = one land-carrying plate through time · color = nearest "
+            "circuit anchor in the rotation tree · orange ticks = "
+            "reference-frame hand-offs (crossovers)",
             ha="center",
-            fontsize=9,
-            color=_MUTED_COLOR,
+            fontsize=8,
+            color=MUTED,
         )
 
         fig.canvas.draw()
-        frames.append(Image.frombuffer(
-            "RGBA",
-            fig.canvas.get_width_height(),
-            fig.canvas.buffer_rgba(),
-        ).convert("P", palette=Image.ADAPTIVE, colors=128))
+        frames.append(
+            Image.frombuffer(
+                "RGBA", fig.canvas.get_width_height(), fig.canvas.buffer_rgba()
+            ).convert("P", palette=Image.ADAPTIVE, colors=128)
+        )
         plt.close(fig)
-        print(f"frame {i + 1}/{len(TIMES)}: {time} Ma", flush=True)
+        if i % 10 == 0 or time == 0:
+            print(f"frame {i + 1}/{len(times)}: {time:g} Ma", flush=True)
 
     durations = [FRAME_MS] * len(frames)
     durations[-1] = END_HOLD_MS
