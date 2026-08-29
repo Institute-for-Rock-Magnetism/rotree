@@ -134,17 +134,27 @@ def lineage_runs(index, pids, grid_step=2.0):
     return runs
 
 
-def row_order(index, model, pids):
-    """Stable row order: group by circuit at youngest age, then by the
-    plate's oldest appearance so lineages cascade in as time advances."""
+def row_order(index, model, pids, group_gap=3.0):
+    """Stable row positions: grouped by circuit at youngest age (with a
+    blank gap between circuits), cascading in by age of first appearance.
+    Returns (pid -> y, total y extent)."""
+
+    order = [c[1] for c in CIRCUITS.values()] + [UNGROUPED]
 
     def key(pid):
         oldest, youngest = index.span(pid)
         color = index.circuit_color(pid, youngest)
-        order = [c[1] for c in CIRCUITS.values()] + [UNGROUPED]
         return (order.index(color), -oldest, pid)
 
-    return {pid: i for i, pid in enumerate(sorted(pids, key=key))}
+    rows, y, prev_group = {}, 0.0, None
+    for pid in sorted(pids, key=key):
+        group = key(pid)[0]
+        if prev_group is not None and group != prev_group:
+            y += group_gap
+        rows[pid] = y
+        y += 1.0
+        prev_group = group
+    return rows, y
 
 
 def draw_map(ax, reconstructed, wrapper, index, time):
@@ -187,7 +197,7 @@ def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
         ax.axvspan(old, young, color="#F0F3F6" if label != "Mesozoic" else "#F6F3EC", zorder=0)
         ax.text(
             (old + young) / 2,
-            n_rows * 1.035,
+            n_rows * 1.065,
             label,
             ha="center",
             va="top",
@@ -202,19 +212,18 @@ def draw_timeline(ax, rows, runs, handoffs, time, n_rows):
             segments.append([(t_old, y), (max(t_young, time), y)])
             colors.append(color)
     ax.add_collection(
-        LineCollection(segments, colors=colors, linewidths=0.55, zorder=2)
+        LineCollection(segments, colors=colors, linewidths=0.9, zorder=2)
     )
     fired = [(t, rows[pid]) for pid, t in handoffs if t >= time and pid in rows]
     if fired:
         xs, ys = zip(*fired)
         ax.plot(
-            xs, ys, "|", ms=4, mew=1.1, color=CURSOR, zorder=3, ls="none"
+            xs, ys, "|", ms=5, mew=1.2, color=CURSOR, zorder=3, ls="none"
         )
     ax.axvline(time, color=CURSOR, lw=1.0, zorder=4)
     ax.set_xlim(T_START + 8, -8)
-    ax.set_ylim(-4, n_rows * 1.04)
+    ax.set_ylim(-4, n_rows * 1.08)
     ax.set_yticks([])
-    ax.set_xlabel("Age (Ma)", fontsize=9, color=MUTED)
     ax.tick_params(axis="x", labelsize=8, colors=MUTED)
     for spine in ("left", "right", "top"):
         ax.spines[spine].set_visible(False)
@@ -235,21 +244,20 @@ def main() -> None:
             if f.get_reconstruction_plate_id() in index.table
         }
     )
-    rows = row_order(index, model, land_pids)
+    rows, y_extent = row_order(index, model, land_pids)
     runs = lineage_runs(index, land_pids)
     handoffs = [
         (pid, x.time) for pid in land_pids for x in model.crossover_details(pid)
     ]
-    n_rows = len(rows)
 
     times = list(np.arange(T_START, -1e-9, -T_STEP)) + [0.0]
     times = sorted(set(round(t, 3) for t in times), reverse=True)
 
     frames = []
     for i, time in enumerate(times):
-        fig = plt.figure(figsize=(10.8, 7.4), dpi=88)
-        ax_map = fig.add_axes([0.06, 0.40, 0.88, 0.55], projection=ccrs.Mollweide())
-        ax_tl = fig.add_axes([0.06, 0.075, 0.88, 0.27])
+        fig = plt.figure(figsize=(10.8, 11.4), dpi=88)
+        ax_map = fig.add_axes([0.10, 0.615, 0.80, 0.36], projection=ccrs.Mollweide())
+        ax_tl = fig.add_axes([0.06, 0.045, 0.88, 0.525])
 
         reconstructed = []
         pygplates.reconstruct(features, rotation_model, reconstructed, time)
@@ -260,14 +268,14 @@ def main() -> None:
             fontsize=11,
             color=INK,
         )
-        draw_timeline(ax_tl, rows, runs, handoffs, time, n_rows)
+        draw_timeline(ax_tl, rows, runs, handoffs, time, y_extent)
         fig.legend(
             handles=[
                 plt.Line2D([], [], color=c, lw=4, label=n)
                 for n, c in CIRCUITS.values()
             ],
             loc="lower center",
-            bbox_to_anchor=(0.5, 0.345),
+            bbox_to_anchor=(0.5, 0.578),
             ncol=6,
             frameon=False,
             fontsize=7,
@@ -277,10 +285,11 @@ def main() -> None:
         )
         fig.text(
             0.5,
-            0.012,
-            "each line = one land-carrying plate through time · color = nearest "
-            "circuit anchor in the rotation tree · orange ticks = "
-            "reference-frame hand-offs (crossovers)",
+            0.008,
+            "age in Ma, time flowing toward the present · each line = one "
+            "land-carrying plate · color = nearest circuit anchor in the "
+            "rotation tree · orange ticks = reference-frame hand-offs "
+            "(crossovers)",
             ha="center",
             fontsize=8,
             color=MUTED,
