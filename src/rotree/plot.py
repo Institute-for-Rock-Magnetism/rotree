@@ -66,6 +66,7 @@ def plot_cladogram(
     name_maxlen: int = 28,
     mark_crossovers: bool = True,
     annotations=None,
+    show_labels: bool = True,
 ):
     """Draw the plate-hierarchy cladogram of a .rot model at ``time`` Ma.
 
@@ -79,6 +80,8 @@ def plot_cladogram(
     annotations : sidecar annotations (path/JSON/list, see
         :mod:`rotree.annotations`); plates with an event active at
         ``time`` are drawn as diamonds
+    show_labels : False draws the bare tree skeleton (no text at nodes),
+        useful for thumbnails and animation frames
 
     Returns the matplotlib Axes.
     """
@@ -89,6 +92,7 @@ def plot_cladogram(
     positions = _layout(root)
     n_leaves = root.n_leaves
 
+    created_fig = ax is None
     if ax is None:
         height = max(3.0, 0.17 * n_leaves + 0.8)
         _, ax = plt.subplots(figsize=(9.5, height))
@@ -141,21 +145,22 @@ def plot_cladogram(
                 label += f"  {name}"
         emphasized = node.plate_id in highlight
         node_color = color or _branch_color(node, depth)
-        ax.text(
-            x + (0.07 if is_leaf else -0.04),
-            y,
-            label,
-            fontsize=(label_fontsize if is_leaf else label_fontsize - 0.8)
-            + (1.5 if emphasized else 0.0),
-            va="center" if is_leaf else "bottom",
-            ha="left" if is_leaf else "right",
-            color=highlight_color
-            if emphasized
-            else (_MUTED_COLOR if node.plate_id < 0 else _LABEL_COLOR),
-            fontweight="bold" if emphasized else "normal",
-            fontstyle="italic" if node.plate_id < 0 else "normal",
-            zorder=3,
-        )
+        if show_labels:
+            ax.text(
+                x + (0.07 if is_leaf else -0.04),
+                y,
+                label,
+                fontsize=(label_fontsize if is_leaf else label_fontsize - 0.8)
+                + (1.5 if emphasized else 0.0),
+                va="center" if is_leaf else "bottom",
+                ha="left" if is_leaf else "right",
+                color=highlight_color
+                if emphasized
+                else (_MUTED_COLOR if node.plate_id < 0 else _LABEL_COLOR),
+                fontweight="bold" if emphasized else "normal",
+                fontstyle="italic" if node.plate_id < 0 else "normal",
+                zorder=3,
+            )
         marker = "D" if node.plate_id in active_plates else "o"
         ax.plot(
             [x],
@@ -229,7 +234,8 @@ def plot_cladogram(
             fontsize=7,
             labelcolor=_MUTED_COLOR,
         )
-    fig.tight_layout()
+    if created_fig:
+        fig.tight_layout()
     return ax
 
 
