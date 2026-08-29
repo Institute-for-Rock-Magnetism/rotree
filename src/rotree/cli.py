@@ -23,6 +23,13 @@ def main(argv=None) -> int:
     p_plot.add_argument("--anchor", type=int, default=0, help="anchor plate id (default 0)")
     p_plot.add_argument("--no-names", action="store_true", help="hide plate names")
     p_plot.add_argument("--highlight", type=int, nargs="*", default=[], help="plate ids to emphasize")
+    p_plot.add_argument(
+        "--annotations",
+        type=Path,
+        default=None,
+        help="sidecar JSON of curated plate events (orogenies, arcs, refs); "
+        "plates with an event active at --time are drawn as diamonds",
+    )
 
     p_html = sub.add_parser(
         "html",
@@ -35,6 +42,13 @@ def main(argv=None) -> int:
     p_html.add_argument("--anchor", type=int, default=0, help="anchor plate id (default 0)")
     p_html.add_argument("--no-names", action="store_true", help="hide plate names")
     p_html.add_argument("--highlight", type=int, nargs="*", default=[], help="plate ids to emphasize")
+    p_html.add_argument(
+        "--annotations",
+        type=Path,
+        default=None,
+        help="sidecar JSON of curated plate events; events appear in the "
+        "hover cards and active plates are drawn as diamonds",
+    )
     p_html.add_argument(
         "--cdn",
         action="store_true",
@@ -64,6 +78,7 @@ def main(argv=None) -> int:
             anchor=args.anchor,
             show_names=not args.no_names,
             highlight=set(args.highlight),
+            annotations=args.annotations,
         )
         print(path)
     elif args.command == "html":
@@ -79,6 +94,7 @@ def main(argv=None) -> int:
             anchor=args.anchor,
             show_names=not args.no_names,
             highlight=set(args.highlight),
+            annotations=args.annotations,
             include_plotlyjs="cdn" if args.cdn else True,
         )
         print(path)

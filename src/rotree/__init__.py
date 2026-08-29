@@ -1,5 +1,6 @@
 """rotree: cladogram visualization of GPlates .rot plate hierarchies."""
 
+from .annotations import PlateEvent, load_annotations
 from .interactive import plot_interactive, save_interactive
 from .parser import Crossover, RotationLine, RotationModel, parse_rot
 from .plot import plot_cladogram, save_cladogram
@@ -19,5 +20,7 @@ __all__ = [
     "save_cladogram",
     "plot_interactive",
     "save_interactive",
+    "PlateEvent",
+    "load_annotations",
     "__version__",
 ]

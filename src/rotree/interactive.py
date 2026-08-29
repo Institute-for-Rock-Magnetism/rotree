@@ -16,6 +16,7 @@ import html as _html
 from pathlib import Path
 from typing import Optional, Union
 
+from .annotations import PlateEvent, events_for, load_annotations
 from .parser import RotationLine, RotationModel, parse_rot
 from .plot import _layout
 from .tree import PlateNode, build_tree
@@ -43,11 +44,26 @@ def _annotation(line: RotationLine) -> str:
     return f"“{_esc(text)}”"
 
 
+def _event_lines(events: list[PlateEvent], time: float) -> list[str]:
+    parts = []
+    for e in events:
+        kind = f" [{_esc(e.kind)}]" if e.kind else ""
+        active = " ◀ active at this age" if e.active_at(time) else ""
+        line = f"<br>• <b>{_esc(e.label)}</b>{kind}, {e.span_text}{active}"
+        if e.ref:
+            line += f"<br>&nbsp;&nbsp;ref: {_esc(e.ref)}"
+        if e.note:
+            line += f"<br>&nbsp;&nbsp;{_esc(e.note)}"
+        parts.append(line)
+    return parts
+
+
 def _hover_text(
     node: PlateNode,
     model: RotationModel,
     names: dict[int, str],
     time: float,
+    events: Optional[list[PlateEvent]] = None,
 ) -> str:
     """HTML hover card: current frame, then the hand-off history with the
     file's own annotations as the citation / data basis for each choice."""
@@ -97,6 +113,11 @@ def _hover_text(
             "for its whole history"
         )
 
+    mine = events_for(events or [], node.plate_id)
+    if mine:
+        parts.append("<br><br><b>annotated events</b>")
+        parts.extend(_event_lines(mine, time))
+
     children = [c for c in node.children if c.plate_id >= 0]
     if children:
         listed = ", ".join(_plate_ref(c.plate_id, names) for c in children[:8])
@@ -115,12 +136,19 @@ def plot_interactive(
     anchor: int = 0,
     show_names: bool = True,
     name_maxlen: int = 24,
+    annotations=None,
 ):
     """Interactive cladogram as a ``plotly.graph_objects.Figure``.
 
     Same tree as :func:`rotree.plot_cladogram`, but every node carries a
     hover card explaining the reference-frame hand-offs and quoting the
     .rot file's annotations (citations) with their line numbers.
+
+    ``annotations`` optionally layers curated knowledge onto the tree: a
+    sidecar JSON path (see :mod:`rotree.annotations`), JSON text, or a
+    list of PlateEvent/dicts. Annotated events appear in the hover cards
+    with their span, kind, reference, and note; plates with an event
+    active at ``time`` are drawn as diamonds.
     """
     try:
         import plotly.graph_objects as go
@@ -136,6 +164,10 @@ def plot_interactive(
     names = model.plate_names()
     highlight = highlight or set()
     crossover_plates = {p for p in model.moving_plates if model.crossovers(p)}
+    events = load_annotations(annotations)
+    active_plates = {
+        p for e in events if e.active_at(time) for p in e.plates
+    }
 
     edge_x: list[Optional[float]] = []
     edge_y: list[Optional[float]] = []
@@ -150,7 +182,7 @@ def plot_interactive(
             ys.extend([y, cy, cy, None])
 
     def node_trace(nodes: list[PlateNode], is_leaf: bool) -> "go.Scatter":
-        xs, ys, labels, hovers, ring_w, txt_color = [], [], [], [], [], []
+        xs, ys, labels, hovers, ring_w, txt_color, symbols = [], [], [], [], [], [], []
         for node in nodes:
             x, y = positions[id(node)]
             xs.append(x)
@@ -166,8 +198,11 @@ def plot_interactive(
                         name = name[: maxlen - 1] + "…"
                     label += f"  {name}"
             labels.append(label)
-            hovers.append(_hover_text(node, model, names, time))
+            hovers.append(_hover_text(node, model, names, time, events))
             ring_w.append(1.6 if node.plate_id in crossover_plates else 0)
+            symbols.append(
+                "diamond" if node.plate_id in active_plates else "circle"
+            )
             txt_color.append(
                 _ACCENT
                 if node.plate_id in highlight
@@ -182,6 +217,7 @@ def plot_interactive(
             textfont=dict(size=10, color=txt_color),
             marker=dict(
                 size=7,
+                symbol=symbols,
                 color=[_ORPHAN if n.plate_id < 0 else _BRANCH for n in nodes],
                 line=dict(width=ring_w, color=_ACCENT),
             ),
@@ -220,13 +256,18 @@ def plot_interactive(
 
     title_path = model.path.name if model.path else "rotation model"
     n_leaves = root.n_leaves
+    subtitle = (
+        "hover a node for its reference-frame hand-offs "
+        "and the .rot annotations behind them; "
+        "ringed nodes re-parent at another age"
+    )
+    if events:
+        subtitle += "; diamonds carry an annotated event at this age"
     fig.update_layout(
         title=dict(
             text=(
                 f"{title_path} — plate hierarchy at {time:g} Ma"
-                "<br><sup>hover a node for its reference-frame hand-offs "
-                "and the .rot annotations behind them; "
-                "ringed nodes re-parent at another age</sup>"
+                f"<br><sup>{subtitle}</sup>"
             ),
             font=dict(size=15, color=_LABEL),
         ),

@@ -76,6 +76,43 @@ bifurcation points where branches join a fixed plate, shows:
 Nodes ringed in orange re-parent at some other age. Pass `--cdn` for a
 small file that loads plotly.js from the internet instead of embedding it.
 
+## Sidecar annotations
+
+A `.rot` file records only the rotation tree; hand-drawn cladograms are
+usually richer — named orogenies, arcs, rifts, and supergroups with time
+spans and references. rotree accepts that curated knowledge as a sidecar
+JSON file, keeping the rotation file untouched:
+
+```json
+{
+  "events": [
+    {
+      "plates": [10100, 20100],
+      "label": "Rigolet orogeny",
+      "kind": "orogeny",
+      "start": 1005,
+      "end": 980,
+      "ref": "Rivers (2008)",
+      "note": "final Grenvillian collisional pulse"
+    }
+  ]
+}
+```
+
+Each event needs `plates` (one id or a list) and a `label`; `start`/`end`
+(Ma, either order — one alone makes a point event), `kind`, `ref`, `note`,
+and `color` are optional.
+
+```bash
+rotree plot model.rot --time 990 --annotations events.json   # active plates drawn as diamonds
+rotree html model.rot --time 990 --annotations events.json   # events join the hover cards
+```
+
+In Python, pass `annotations=` (a path, JSON text, or a list of dicts /
+`PlateEvent`) to `plot_cladogram`, `save_cladogram`, `plot_interactive`,
+or `save_interactive`. Hover cards list every event attached to a plate —
+span, kind, reference, note — flagging those active at the plotted age.
+
 ## Notes
 
 - Plate names are harvested best-effort from the trailing `!` comments on

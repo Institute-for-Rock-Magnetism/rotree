@@ -76,6 +76,77 @@ def test_segment_at():
     assert model.segment_at(201, 900.0) is None
 
 
+ANNOTATIONS = [
+    {
+        "plates": [201, 101],
+        "label": "Caledonian collision",
+        "kind": "orogeny",
+        "start": 430,
+        "end": 390,
+        "ref": "Gee et al. (2008)",
+        "note": "ties Baltica to the Laurentia frame",
+    },
+    {"plates": 301, "label": "Rodinia fit", "start": 900},
+    {"plates": [301], "label": "undated basement suture"},
+]
+
+
+def test_annotations_load_and_activity(tmp_path: Path):
+    import json
+
+    from rotree import load_annotations
+    from rotree.annotations import events_for
+
+    # dicts, JSON text, and a sidecar file all normalize identically
+    from_list = load_annotations(ANNOTATIONS)
+    path = tmp_path / "events.json"
+    path.write_text(json.dumps({"events": ANNOTATIONS}))
+    from_file = load_annotations(path)
+    assert from_list == from_file
+
+    caledonian, rodinia, undated = from_list
+    assert caledonian.plates == (201, 101)
+    assert caledonian.span_text == "430–390 Ma"
+    assert caledonian.active_at(400) and not caledonian.active_at(500)
+    assert rodinia.active_at(900) and not rodinia.active_at(899)
+    assert not undated.active_at(0)  # undated is never "active"
+
+    # oldest first, undated last
+    assert [e.label for e in events_for(from_list, 301)] == [
+        "Rodinia fit",
+        "undated basement suture",
+    ]
+
+    with pytest.raises(ValueError):
+        load_annotations([{"plates": [1]}])  # label is required
+
+
+def test_annotations_reach_hover_and_plot(tmp_path: Path):
+    pytest.importorskip("plotly")
+    from rotree import plot_interactive
+
+    fig = plot_interactive(parse_rot(SAMPLE), time=400.0, annotations=ANNOTATIONS)
+    hovers = [
+        h
+        for trace in fig.data
+        if getattr(trace, "hovertext", None)
+        for h in trace.hovertext
+    ]
+    baltica = next(h for h in hovers if "plate 201" in h)
+    assert "Caledonian collision" in baltica
+    assert "Gee et al. (2008)" in baltica
+    assert "active at this age" in baltica
+
+    pytest.importorskip("matplotlib")
+    from rotree import save_cladogram
+
+    out = save_cladogram(
+        parse_rot(SAMPLE), tmp_path / "annotated.png", time=400.0,
+        annotations=ANNOTATIONS,
+    )
+    assert out.exists() and out.stat().st_size > 0
+
+
 def test_interactive_smoke(tmp_path: Path):
     pytest.importorskip("plotly")
     from rotree import plot_interactive, save_interactive

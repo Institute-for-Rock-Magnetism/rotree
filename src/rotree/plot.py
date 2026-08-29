@@ -65,6 +65,7 @@ def plot_cladogram(
     highlight_color: str = "#C1441E",
     name_maxlen: int = 28,
     mark_crossovers: bool = True,
+    annotations=None,
 ):
     """Draw the plate-hierarchy cladogram of a .rot model at ``time`` Ma.
 
@@ -75,9 +76,14 @@ def plot_cladogram(
     highlight : plate IDs whose labels are emphasized
     color : single branch color; default colors branches by depth
     mark_crossovers : ring the plates that re-parent elsewhere in time
+    annotations : sidecar annotations (path/JSON/list, see
+        :mod:`rotree.annotations`); plates with an event active at
+        ``time`` are drawn as diamonds
 
     Returns the matplotlib Axes.
     """
+    from .annotations import load_annotations
+
     model = source if isinstance(source, RotationModel) else parse_rot(source)
     root = build_tree(model, time=time, anchor=anchor)
     positions = _layout(root)
@@ -95,6 +101,8 @@ def plot_cladogram(
         if mark_crossovers
         else set()
     )
+    events = load_annotations(annotations)
+    active_plates = {p for e in events if e.active_at(time) for p in e.plates}
 
     # subtle bands behind alternating leaf rows keep long labels traceable
     for row in range(0, n_leaves, 2):
@@ -148,7 +156,15 @@ def plot_cladogram(
             fontstyle="italic" if node.plate_id < 0 else "normal",
             zorder=3,
         )
-        ax.plot([x], [y], "o", ms=2.6, color=node_color, zorder=2)
+        marker = "D" if node.plate_id in active_plates else "o"
+        ax.plot(
+            [x],
+            [y],
+            marker,
+            ms=3.4 if marker == "D" else 2.6,
+            color=node_color,
+            zorder=2,
+        )
         if node.plate_id in crossover_plates:
             ax.plot(
                 [x],
@@ -178,21 +194,36 @@ def plot_cladogram(
         ax.spines[spine].set_visible(False)
     ax.spines["bottom"].set_color(_MUTED_COLOR)
 
+    legend_handles = []
     if crossover_plates:
+        legend_handles.append(
+            Line2D(
+                [],
+                [],
+                marker="o",
+                ls="none",
+                mfc="none",
+                mec=highlight_color,
+                mew=0.9,
+                ms=6.5,
+                label="plate re-parents at another age (crossover)",
+            )
+        )
+    if active_plates:
+        legend_handles.append(
+            Line2D(
+                [],
+                [],
+                marker="D",
+                ls="none",
+                color=_LABEL_COLOR,
+                ms=4.5,
+                label="annotated event active at this age",
+            )
+        )
+    if legend_handles:
         ax.legend(
-            handles=[
-                Line2D(
-                    [],
-                    [],
-                    marker="o",
-                    ls="none",
-                    mfc="none",
-                    mec=highlight_color,
-                    mew=0.9,
-                    ms=6.5,
-                    label="plate re-parents at another age (crossover)",
-                )
-            ],
+            handles=legend_handles,
             loc="lower right",
             frameon=False,
             fontsize=7,
