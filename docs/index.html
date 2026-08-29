@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rotree — see how a GPlates rotation model is wired</title>
+<meta name="description" content="Cladogram visualization of the plate-rotation hierarchy in any GPlates .rot file. Static matplotlib figures and interactive plotly trees with citation-aware hover cards.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f4f7fa;
+    --ink: #26313b;
+    --muted: #66727e;
+    --accent: #c1441e;
+    --branch: #31547e;
+    --line: #dde4ea;
+    --code-bg: #f0f3f6;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181c;
+      --bg-soft: #1b2127;
+      --ink: #e4e9ee;
+      --muted: #98a4b0;
+      --accent: #e2683f;
+      --branch: #7ba3d0;
+      --line: #2c343d;
+      --code-bg: #20262d;
+      --card: #1b2127;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  header.hero {
+    padding: 4rem 1.25rem 3rem;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-inner { max-width: 860px; margin: 0 auto; }
+  h1 {
+    font-size: 2.6rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  h1 .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .tagline { font-size: 1.2rem; color: var(--muted); max-width: 40em; margin: 0 0 1.5rem; }
+  .cta a {
+    display: inline-block;
+    margin: 0 0.6rem 0.6rem 0;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--branch);
+  }
+  .cta a.primary { background: var(--branch); color: #fff; }
+  .cta a.secondary { color: var(--branch); }
+  h2 { font-size: 1.5rem; margin: 3rem 0 0.75rem; letter-spacing: -0.01em; }
+  p  { margin: 0.75rem 0; }
+  a  { color: var(--branch); }
+  code, pre {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.88em;
+  }
+  code { background: var(--code-bg); padding: 0.12em 0.35em; border-radius: 5px; }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    overflow-x: auto;
+    line-height: 1.55;
+  }
+  pre code { background: none; padding: 0; }
+  .comment { color: var(--muted); }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+  }
+  .features li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+  }
+  .features b { display: block; margin-bottom: 0.25rem; }
+  .features li span { color: var(--muted); font-size: 0.95rem; }
+  figure { margin: 1.5rem 0; }
+  figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+  }
+  figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
+  .demo-frame {
+    width: 100%;
+    height: 620px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .note {
+    border-left: 3px solid var(--accent);
+    background: var(--bg-soft);
+    padding: 0.7rem 1rem;
+    border-radius: 0 10px 10px 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  footer {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 1.5rem 1.25rem 3rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1><span class="mono">rotree</span></h1>
+    <p class="tagline">
+      See how a plate-reconstruction model is wired. <code>rotree</code> turns any
+      GPlates rotation (<code>.rot</code>) file into a cladogram of its plate
+      hierarchy — static figures for papers, interactive trees for exploring
+      why each plate is framed the way it is.
+    </p>
+    <div class="cta">
+      <a class="primary" href="https://github.com/Institute-for-Rock-Magnetism/rotree">View on GitHub</a>
+      <a class="secondary" href="example_extended_TC17_700Ma.html">Open the interactive demo</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<h2>Why</h2>
+<p>
+  A GPlates rotation file encodes a <em>rotation tree</em>: every moving plate
+  is positioned relative to a fixed plate, which is positioned relative to
+  another, until the chain reaches the anchor (plate 0). That wiring is easy
+  to write and hard to see — especially where plates re-parent through time
+  (crossovers) or quietly lose their path to the anchor.
+  <code>rotree</code> parses the <code>.rot</code> file directly (no pygplates
+  dependency), rebuilds the hierarchy at any reconstruction age, and draws it.
+</p>
+
+<ul class="features">
+  <li><b>Zero-dependency parsing</b><span>Reads PLATES4/GPlates .rot files with plain Python — pole values, comments, and source line numbers all preserved.</span></li>
+  <li><b>Crossovers made visible</b><span>Plates that change fixed plate at another age are ringed in orange; <code>rotree crossovers</code> lists every hand-off in the model.</span></li>
+  <li><b>Citation-aware hover cards</b><span>The interactive view quotes the file's own <code>!</code> annotations — typically the citation or reasoning behind each reference-frame choice — with .rot line numbers.</span></li>
+  <li><b>Nothing silently dropped</b><span>Plates with no path to the anchor land on a labelled <em>orphans</em> branch, handy for debugging model completeness.</span></li>
+</ul>
+
+<h2>Install</h2>
+<pre><code>pip install git+https://github.com/Institute-for-Rock-Magnetism/rotree.git
+
+<span class="comment"># with plotly for the interactive HTML output</span>
+pip install "rotree[interactive] @ git+https://github.com/Institute-for-Rock-Magnetism/rotree.git"</code></pre>
+
+<h2>Quick start</h2>
+<pre><code><span class="comment"># static cladogram at 700 Ma</span>
+rotree plot model.rot --time 700 -o tree_700Ma.png
+
+<span class="comment"># interactive: hover nodes for hand-off history and citations</span>
+rotree html model.rot --time 700 -o tree_700Ma.html
+
+<span class="comment"># where does the wiring change through time?</span>
+rotree crossovers model.rot
+
+<span class="comment"># plain-text view</span>
+rotree tree model.rot --time 700</code></pre>
+
+<h2>Static output</h2>
+<figure>
+  <a href="example_extended_TC17_700Ma.png">
+    <img src="example_extended_TC17_700Ma.png"
+         alt="Cladogram of the TC2017-SHM2017-D2018-extended rotation model at 700 Ma"
+         loading="lazy">
+  </a>
+  <figcaption>
+    The extended Torsvik &amp; Cocks (2017) model at 700&nbsp;Ma. Branches are
+    colored by depth; orange rings mark plates that re-parent at another age;
+    unreachable plates hang from the dotted <em>orphans</em> branch.
+  </figcaption>
+</figure>
+
+<h2>Interactive output</h2>
+<p>
+  Hover any node — in particular the bifurcation points where branches join a
+  fixed plate — to see the rotation segment pinning it at the chosen age
+  (pole, time span, source line), every reference-frame hand-off it undergoes
+  through time, and the annotations behind those choices.
+</p>
+<iframe class="demo-frame" src="example_extended_TC17_700Ma.html"
+        title="Interactive rotree cladogram demo" loading="lazy"></iframe>
+<p class="note">
+  Tip: the tree is tall — scroll inside the frame, or
+  <a href="example_extended_TC17_700Ma.html">open the demo full-page</a>.
+</p>
+
+<h2>Python API</h2>
+<pre><code>from rotree import parse_rot, build_tree, plot_cladogram, save_interactive
+
+model = parse_rot("model.rot")
+
+ax = plot_cladogram(model, time=600, highlight={50311, 50312})
+ax.figure.savefig("tree_600Ma.pdf")
+
+save_interactive(model, "tree_600Ma.html", time=600)
+
+root = build_tree(model, time=600)          <span class="comment"># PlateNode hierarchy</span>
+for x in model.crossover_details(201):      <span class="comment"># hand-offs + annotations</span>
+    print(x.time, x.old_fixed, "-&gt;", x.new_fixed, "|", x.after.comment)</code></pre>
+
+</main>
+
+<footer>
+  <a href="https://github.com/Institute-for-Rock-Magnetism/rotree">rotree</a>
+  · MIT License · Institute for Rock Magnetism
+</footer>
+
+</body>
+</html>
