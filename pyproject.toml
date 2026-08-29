@@ -26,7 +26,8 @@ Homepage = "https://github.com/Institute-for-Rock-Magnetism/rotree"
 rotree = "rotree.cli:main"
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "plotly>=5"]
+interactive = ["plotly>=5"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

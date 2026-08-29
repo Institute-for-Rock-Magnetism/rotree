@@ -1,12 +1,14 @@
 """rotree: cladogram visualization of GPlates .rot plate hierarchies."""
 
-from .parser import RotationLine, RotationModel, parse_rot
+from .interactive import plot_interactive, save_interactive
+from .parser import Crossover, RotationLine, RotationModel, parse_rot
 from .plot import plot_cladogram, save_cladogram
 from .tree import PlateNode, all_crossovers, build_tree
 
 __version__ = "0.1.0"
 
 __all__ = [
+    "Crossover",
     "RotationLine",
     "RotationModel",
     "parse_rot",
@@ -15,5 +17,7 @@ __all__ = [
     "all_crossovers",
     "plot_cladogram",
     "save_cladogram",
+    "plot_interactive",
+    "save_interactive",
     "__version__",
 ]

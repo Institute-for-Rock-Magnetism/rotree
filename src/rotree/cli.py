@@ -24,6 +24,24 @@ def main(argv=None) -> int:
     p_plot.add_argument("--no-names", action="store_true", help="hide plate names")
     p_plot.add_argument("--highlight", type=int, nargs="*", default=[], help="plate ids to emphasize")
 
+    p_html = sub.add_parser(
+        "html",
+        help="render an interactive cladogram (hover nodes for hand-off "
+        "details and the .rot annotations behind them; needs plotly)",
+    )
+    p_html.add_argument("rot", type=Path, help="path to the .rot file")
+    p_html.add_argument("--time", type=float, default=0.0, help="age in Ma (default 0)")
+    p_html.add_argument("-o", "--out", type=Path, default=None, help="output .html file")
+    p_html.add_argument("--anchor", type=int, default=0, help="anchor plate id (default 0)")
+    p_html.add_argument("--no-names", action="store_true", help="hide plate names")
+    p_html.add_argument("--highlight", type=int, nargs="*", default=[], help="plate ids to emphasize")
+    p_html.add_argument(
+        "--cdn",
+        action="store_true",
+        help="load plotly.js from the CDN (small file, needs internet) "
+        "instead of embedding it",
+    )
+
     p_x = sub.add_parser("crossovers", help="list fixed-plate changes (reparenting) through time")
     p_x.add_argument("rot", type=Path)
 
@@ -46,6 +64,22 @@ def main(argv=None) -> int:
             anchor=args.anchor,
             show_names=not args.no_names,
             highlight=set(args.highlight),
+        )
+        print(path)
+    elif args.command == "html":
+        from .interactive import save_interactive
+
+        out = args.out or args.rot.with_suffix("").with_name(
+            f"{args.rot.stem}_cladogram_{args.time:g}Ma.html"
+        )
+        path = save_interactive(
+            args.rot,
+            out,
+            time=args.time,
+            anchor=args.anchor,
+            show_names=not args.no_names,
+            highlight=set(args.highlight),
+            include_plotlyjs="cdn" if args.cdn else True,
         )
         print(path)
     elif args.command == "crossovers":

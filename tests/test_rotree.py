@@ -76,6 +76,25 @@ def test_segment_at():
     assert model.segment_at(201, 900.0) is None
 
 
+def test_interactive_smoke(tmp_path: Path):
+    pytest.importorskip("plotly")
+    from rotree import plot_interactive, save_interactive
+
+    fig = plot_interactive(parse_rot(SAMPLE), time=100.0, highlight={201})
+    hovers = [
+        h
+        for trace in fig.data
+        if getattr(trace, "hovertext", None)
+        for h in trace.hovertext
+    ]
+    baltica = next(h for h in hovers if "plate 201" in h)
+    assert "hand-off" in baltica and "crossover to Gondwana frame" in baltica
+    assert "line " in baltica  # cites the .rot source line
+
+    out = save_interactive(parse_rot(SAMPLE), tmp_path / "clado.html", time=100.0)
+    assert out.exists() and out.stat().st_size > 0
+
+
 def test_plot_smoke(tmp_path: Path):
     pytest.importorskip("matplotlib")
     from rotree import save_cladogram
