@@ -201,6 +201,33 @@ rotree tree model.rot --time 700</code></pre>
   </figcaption>
 </figure>
 
+<h2>Handoffs and the evidence behind them</h2>
+<p>
+  <code>rotree cladogram</code> lays the hierarchy out along geological time:
+  each plate a line coloured by the plate it is fixed to, a connector to the new
+  parent at every handoff, and a stop in the colour of the event that caused it —
+  rifting, collision, suture, ophiolite obduction, a paleomagnetic pole — read
+  from a <code>&lt;stem&gt;.handoff_evidence.csv</code> sidecar beside the
+  <code>.rot</code> file. A handoff with no evidence is drawn as a hollow gap,
+  and sidecar rows that match no handoff are reported rather than dropped.
+</p>
+<pre><code>rotree cladogram model.rot --window 1000 500 --circuit 5904 -o handoffs.html
+rotree handoffs model.rot --window 1000 500</code></pre>
+<figure>
+  <a href="example_merdith2021_ANS_handoffs.png">
+    <img src="example_merdith2021_ANS_handoffs.png"
+         alt="Handoffs of Arabian-Nubian Shield and Azania plates in Merdith et al. 2021, 1000 to 500 Ma, with event-coloured stops and hollow gaps"
+         loading="lazy">
+  </a>
+  <figcaption>
+    Merdith et al. (2021), Arabian-Nubian Shield and Azania plates, with the seed
+    evidence in <code>examples/merdith2021</code>: 17 handoffs with evidence, 55
+    gaps, one row that matches no handoff.
+    <a href="example_merdith2021_ANS_handoffs.html">Interactive version</a> ·
+    <a href="example_merdith2021_handoffs_1100-500Ma.html">every handoff in the model</a>.
+  </figcaption>
+</figure>
+
 <h2>In motion</h2>
 <figure>
   <img src="rotree_reconstruction.gif"

@@ -1,0 +1,6 @@
+moving_plate_id,moving_plate_name,handoff_age_ma,from_fixed_plate_id,to_fixed_plate_id,event_type,event_label,evidence,evidence_age_ma,evidence_age_uncertainty_ma,reference,confidence
+201,Amazonia,600,101,701,rifting,Amazonia leaves Laurentia,"Synthetic rift, dated 605 ± 10 Ma",605,10,Test et al. (2000),high
+5901,Juvenile arc,780,701,201,suture,Arc suture,Synthetic suture,770,5,,medium
+5901,Juvenile arc,860,,701,emergence,Arc crust appears,Oldest arc rocks,,,,low
+201,Amazonia,650,101,701,collision,A handoff the file does not have,,,,,low
+999,Nobody,700,1,2,other,A plate that is not in the file,,,,,low

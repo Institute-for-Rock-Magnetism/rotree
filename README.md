@@ -33,6 +33,88 @@ plate circuits on the timeline (click to expand)</summary>
 
 </details>
 
+## Handoffs through time, with the evidence for each
+
+A plate's parent changes through time: a terrane rides an ocean plate, then
+accretes to a craton; a craton rifts away from its Rodinian neighbour. The
+`.rot` file records *that* the fixed plate changes. `rotree cladogram` also
+shows *why*, from a small CSV of evidence kept beside the rotation file:
+
+![Handoffs of the Arabian-Nubian Shield and Azania plates in Merdith et al. (2021), 1000–500 Ma, each stop coloured by the geological event behind it, with hollow stops where no evidence is recorded](docs/example_merdith2021_ANS_handoffs.png)
+
+*Merdith et al. (2021), 1000–500 Ma, Arabian-Nubian Shield and Azania plates,
+annotated with the seed sidecar in
+[`examples/merdith2021`](examples/merdith2021). Time runs left to right,
+older on the left; each plate is a line coloured by the plate it is fixed to,
+drawn heavier the more plates it carries. At each handoff a connector joins the
+plate to its new parent (a dashed one leaves the old parent) and a **stop**
+spans the evidence's age uncertainty, in the colour of the event: rifting,
+breakup, collision, suture, accretion, emergence, ophiolite obduction,
+paleomagnetic constraint. A **hollow dashed stop is a gap** — a handoff with
+no evidence recorded — never hidden. The thin black tick in each stop is the
+age at which the file changes the fixed plate, so evidence dated elsewhere
+shows up as a stop beside its tick. Numbered stops refer to the evidence
+table under the figure. [Interactive version](docs/example_merdith2021_ANS_handoffs.html)
+(hover a stop for its evidence and reference, click it to move the time
+cursor; [every handoff in the model](docs/example_merdith2021_handoffs_1100-500Ma.html)).*
+
+```bash
+# static figure (svg, pdf or png) or interactive page (html)
+rotree cladogram model.rot --window 1100 500 -o handoffs.svg
+rotree cladogram model.rot --window 1000 500 --circuit 5904 --time 780 -o handoffs.html
+
+# every handoff with its evidence, or GAP; sidecar rows that match nothing
+rotree handoffs model.rot --window 1000 500
+
+# start a sidecar: one row per detected handoff, evidence columns empty
+rotree handoffs model.rot --window 1000 500 --template model.handoff_evidence.csv
+```
+
+### The evidence sidecar
+
+For `model.rot` the sidecar is `model.handoff_evidence.csv` in the same
+directory; it is found automatically (`--evidence FILE` points elsewhere,
+`--no-evidence` ignores it). Columns:
+
+| column | meaning |
+| --- | --- |
+| `moving_plate_id`, `moving_plate_name` | the plate that hands off |
+| `handoff_age_ma` | the age at which the `.rot` file changes its fixed plate |
+| `from_fixed_plate_id`, `to_fixed_plate_id` | the parent on the **older** side, and on the **younger** side — read forward in time |
+| `event_type` | `rifting`, `breakup`, `collision`, `suture`, `accretion`, `emergence`, `ophiolite_obduction`, `paleomagnetic_constraint`, `reference_frame` or `other` |
+| `event_label`, `evidence` | a short name, and what the evidence is |
+| `evidence_age_ma`, `evidence_age_uncertainty_ma` | the evidence's own age and its ± |
+| `reference` | the citation; leave it empty rather than guess |
+| `confidence` | `high`, `medium` or `low` |
+
+Handoffs are detected from the `.rot` file — every change of fixed plate along
+a moving plate's sequence — and the sidecar only annotates them, so:
+
+- a handoff with no row is reported and drawn as a **gap**;
+- a row that matches no handoff (wrong plate, wrong age, or parents the file
+  does not have) is **reported with the reason**, never silently dropped;
+- a row with `from`/`to` swapped still matches, with a warning;
+- a row with an empty `from_fixed_plate_id` annotates the plate's
+  *appearance* — the oldest age the file defines it, e.g. terrane emergence as
+  distinct from a later collision;
+- evidence whose age ± uncertainty does not bracket the file's handoff age is
+  flagged, with how far off it is: that is often the most useful finding;
+- ages match within `--tolerance` (default 0.5 Myr).
+
+GPlates Studio reads the same sidecar beside a loaded `.rot` file and draws it
+in its rotation tree history.
+
+```python
+from rotree import parse_rot, annotate, save_timeline
+
+model = parse_rot("model.rot")
+report = annotate(model, "model.handoff_evidence.csv")
+print(report.summary(1000, 500))
+for gap in report.gaps:
+    print(gap.handoff.moving_plate, gap.handoff.age)
+save_timeline(model, "handoffs.pdf", oldest=1000, youngest=500, circuit=5904)
+```
+
 ## Install
 
 ```bash

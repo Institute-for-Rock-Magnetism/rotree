@@ -56,6 +56,55 @@ def main(argv=None) -> int:
         "instead of embedding it",
     )
 
+    def evidence_args(p):
+        p.add_argument(
+            "--evidence",
+            type=Path,
+            default=None,
+            help="handoff-evidence CSV (default: <rot stem>.handoff_evidence.csv "
+            "beside the .rot file, if present)",
+        )
+        p.add_argument("--no-evidence", action="store_true", help="ignore any sidecar")
+        p.add_argument(
+            "--window",
+            type=float,
+            nargs=2,
+            default=[1100.0, 500.0],
+            metavar=("OLDEST", "YOUNGEST"),
+            help="age range in Ma (default 1100 500)",
+        )
+        p.add_argument("--tolerance", type=float, default=0.5,
+                       help="Myr within which a sidecar age matches a handoff (default 0.5)")
+
+    p_c = sub.add_parser(
+        "cladogram",
+        help="time-axis cladogram: which plate each plate is fixed to, when it "
+        "hands off, and the evidence for each handoff (svg/pdf/png/html)",
+    )
+    p_c.add_argument("rot", type=Path)
+    p_c.add_argument("-o", "--out", type=Path, default=None,
+                     help="output .svg/.pdf/.png, or .html for the interactive page")
+    evidence_args(p_c)
+    p_c.add_argument("--plates", type=int, nargs="*", default=None,
+                     help="rows to draw (plus the plates they hand off between)")
+    p_c.add_argument("--circuit", type=int, default=None,
+                     help="draw this plate, what it is fixed to, and everything fixed to it")
+    p_c.add_argument("--time", type=float, default=None, help="draw a time cursor at this age")
+    p_c.add_argument("--no-table", action="store_true", help="omit the evidence table (static output)")
+    p_c.add_argument("--title", default=None)
+
+    p_h = sub.add_parser(
+        "handoffs",
+        help="list every fixed-plate handoff with its evidence, or GAP where there "
+        "is none, and report sidecar rows that match no handoff",
+    )
+    p_h.add_argument("rot", type=Path)
+    evidence_args(p_h)
+    p_h.add_argument("--template", type=Path, default=None,
+                     help="write a sidecar skeleton (one row per handoff in the window) here")
+    p_h.add_argument("--strict", action="store_true",
+                     help="exit 1 if any sidecar row is unmatched or unreadable")
+
     p_x = sub.add_parser("crossovers", help="list fixed-plate changes (reparenting) through time")
     p_x.add_argument("rot", type=Path)
 
@@ -98,6 +147,31 @@ def main(argv=None) -> int:
             include_plotlyjs="cdn" if args.cdn else True,
         )
         print(path)
+    elif args.command in ("cladogram", "handoffs"):
+        from .evidence import format_report, load_model_and_evidence, write_template
+
+        evidence = False if args.no_evidence else args.evidence
+        oldest, youngest = max(args.window), min(args.window)
+        if args.command == "cladogram":
+            from .timeline import save_timeline
+
+            out = args.out or args.rot.with_name(
+                f"{args.rot.stem}_handoffs_{oldest:g}-{youngest:g}Ma.svg")
+            path = save_timeline(
+                args.rot, out, oldest=oldest, youngest=youngest, evidence=evidence,
+                plates=args.plates, circuit=args.circuit, time=args.time,
+                show_table=not args.no_table, tolerance=args.tolerance, title=args.title,
+            )
+            print(path)
+        else:
+            model, report = load_model_and_evidence(args.rot, evidence, args.tolerance)
+            print(f"{args.rot.name} · evidence: "
+                  f"{report.sidecar if report.sidecar else 'none'}")
+            print(format_report(report, model.plate_names(), oldest, youngest))
+            if args.template:
+                print(write_template(model, args.template, oldest, youngest))
+            if args.strict and (report.unmatched or report.issues):
+                return 1
     elif args.command == "crossovers":
         model = parse_rot(args.rot)
         rows = all_crossovers(model)

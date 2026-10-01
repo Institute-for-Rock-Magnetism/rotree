@@ -1,0 +1,1922 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="1211.04pt" viewBox="0 0 1080 1211.04" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T11:39:57.202739</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 1211.04 
+L 1080 1211.04 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 216 563.425027 
+L 1058.4 563.425027 
+L 1058.4 75.55508 
+L 216 75.55508 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 1058.4 563.425027 
+L 1058.4 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m194f0d9217" d="M 0 0 
+L 0 -3 
+" style="stroke: #6f7c84; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m194f0d9217" x="1058.4" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="1058.4" y="67.495315" transform="rotate(-0 1058.4 67.495315)">500</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 889.92 563.425027 
+L 889.92 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m194f0d9217" x="889.92" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="889.92" y="67.495315" transform="rotate(-0 889.92 67.495315)">600</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 721.44 563.425027 
+L 721.44 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m194f0d9217" x="721.44" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="721.44" y="67.495315" transform="rotate(-0 721.44 67.495315)">700</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 552.96 563.425027 
+L 552.96 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m194f0d9217" x="552.96" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="552.96" y="67.495315" transform="rotate(-0 552.96 67.495315)">800</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 384.48 563.425027 
+L 384.48 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m194f0d9217" x="384.48" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="384.48" y="67.495315" transform="rotate(-0 384.48 67.495315)">900</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 216 563.425027 
+L 216 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #eef1f3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m194f0d9217" x="216" y="75.55508" style="fill: #6f7c84; stroke: #6f7c84; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="216" y="67.495315" transform="rotate(-0 216 67.495315)">1000</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_7">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="92.458911" transform="rotate(-0 210 92.458911)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_8">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="110.264384" transform="rotate(-0 210 110.264384)">70 TPWC Longitudinal shift</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_9">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="128.069856" transform="rotate(-0 210 128.069856)">701 070 Africa-longitude correcti…</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_10">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="145.875329" transform="rotate(-0 210 145.875329)">501 CIB India Craton-Central Indi…</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_11">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="163.680801" transform="rotate(-0 210 163.680801)">5014 IND Southern Granulite Terran…</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_12">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="181.486274" transform="rotate(-0 210 181.486274)">702 AFR Madagascar-Africa</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19"/>
+     <g id="text_13">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="199.291746" transform="rotate(-0 210 199.291746)">77021 Central Madagascar-Madagascar</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20"/>
+     <g id="text_14">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="217.097219" transform="rotate(-0 210 217.097219)">77022 Southern Madagascar-Madagascar</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21"/>
+     <g id="text_15">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="234.902691" transform="rotate(-0 210 234.902691)">709 AFR, Somalia Plate - Nubia</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_22"/>
+     <g id="text_16">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="252.708164" transform="rotate(-0 210 252.708164)">503 SOM Arabia-Somalia</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_23"/>
+     <g id="text_17">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="270.513636" transform="rotate(-0 210 270.513636)">5913 OMB Jiddah-Omani Basement</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_24"/>
+     <g id="text_18">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="288.319109" transform="rotate(-0 210 288.319109)">5031 OMB Afif Terrane-Omani Baseme…</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_25"/>
+     <g id="text_19">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="306.124581" transform="rotate(-0 210 306.124581)">5912 AFT Ar Rayn-Afif Abas</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_26"/>
+     <g id="text_20">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="323.930054" transform="rotate(-0 210 323.930054)">5907 OMB Hijaz-Omani Basement</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_27"/>
+     <g id="text_21">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="341.735526" transform="rotate(-0 210 341.735526)">5908 OMB Hulayfah-Omani Basement</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_28"/>
+     <g id="text_22">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="359.540999" transform="rotate(-0 210 359.540999)">5909 OMB Ha'il-Omani Basement</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_29"/>
+     <g id="text_23">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="377.346471" transform="rotate(-0 210 377.346471)">5032 SOM Azania-Somalia</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_30"/>
+     <g id="text_24">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="395.151944" transform="rotate(-0 210 395.151944)">715 AFR Northeast Africa-Africa</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_31"/>
+     <g id="text_25">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="412.957416" transform="rotate(-0 210 412.957416)">508 ARB Sinai-Arabia</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_32"/>
+     <g id="text_26">
+      <text style="font-weight: 700; font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="430.762889" transform="rotate(-0 210 430.762889)">5901 SMC Tokar Barka-Sahara Metacr…</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_33"/>
+     <g id="text_27">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="448.568361" transform="rotate(-0 210 448.568361)">5902 SMC Haya-Sahara Metacraton</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_34"/>
+     <g id="text_28">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="466.373834" transform="rotate(-0 210 466.373834)">5904 SMC Gebeit/Gabgaba-Sahara Met…</text>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_35"/>
+     <g id="text_29">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="484.179306" transform="rotate(-0 210 484.179306)">5905 SMC Egyptian Desert-Sahara Me…</text>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_36"/>
+     <g id="text_30">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="501.984779" transform="rotate(-0 210 501.984779)">5906 OMB Midyan-Omani Basement</text>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_37"/>
+     <g id="text_31">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="519.790251" transform="rotate(-0 210 519.790251)">5903 SMC Atmur-Delgo-Sahara Metacr…</text>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_38"/>
+     <g id="text_32">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="537.595724" transform="rotate(-0 210 537.595724)">801 ANT Australia-Antarctica</text>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_39"/>
+     <g id="text_33">
+      <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="210" y="555.401196" transform="rotate(-0 210 555.401196)">101 NWA North America-Northwest A…</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 1058.4 107.604931 
+L 216 107.604931 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33333; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 468.72 125.410403 
+L 216 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #336ea3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 991.008 125.410403 
+L 468.72 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33333; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 1058.4 125.410403 
+L 991.008 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #6333a3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_5">
+    <path d="M 687.744 143.215876 
+L 216 143.215876 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33333; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_6">
+    <path d="M 805.68 143.215876 
+L 687.744 143.215876 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33351; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_7">
+    <path d="M 1058.4 143.215876 
+L 805.68 143.215876 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_8">
+    <path d="M 1024.704 161.021348 
+L 216 161.021348 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a35933"/>
+   </g>
+   <g id="LineCollection_9">
+    <path d="M 1058.4 161.021348 
+L 1024.704 161.021348 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #33a349"/>
+   </g>
+   <g id="LineCollection_10">
+    <path d="M 1024.704 178.826821 
+L 216 178.826821 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #33a349; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_11">
+    <path d="M 1058.4 178.826821 
+L 1024.704 178.826821 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_12">
+    <path d="M 1024.704 196.632293 
+L 216 196.632293 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a35933"/>
+   </g>
+   <g id="LineCollection_13">
+    <path d="M 1058.4 196.632293 
+L 1024.704 196.632293 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a39133"/>
+   </g>
+   <g id="LineCollection_14">
+    <path d="M 1024.704 214.437766 
+L 216 214.437766 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a35933"/>
+   </g>
+   <g id="LineCollection_15">
+    <path d="M 1058.4 214.437766 
+L 1024.704 214.437766 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a39133"/>
+   </g>
+   <g id="LineCollection_16">
+    <path d="M 1058.4 232.243238 
+L 216 232.243238 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_17">
+    <path d="M 1024.704 250.048711 
+L 216 250.048711 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #33a349; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_18">
+    <path d="M 1058.4 250.048711 
+L 1024.704 250.048711 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #9633a3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_19">
+    <path d="M 1024.704 267.854183 
+L 451.872 267.854183 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a3333d; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_20">
+    <path d="M 1058.4 267.854183 
+L 1024.704 267.854183 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a38a33; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_21">
+    <path d="M 468.72 285.659656 
+L 216 285.659656 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_22">
+    <path d="M 1058.4 285.659656 
+L 468.72 285.659656 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3375a3; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_23">
+    <path d="M 1058.4 303.465128 
+L 704.592 303.465128 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3933a3"/>
+   </g>
+   <g id="LineCollection_24">
+    <path d="M 586.656 321.270601 
+L 451.872 321.270601 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a38b33; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_25">
+    <path d="M 1058.4 321.270601 
+L 586.656 321.270601 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3375a3; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_26">
+    <path d="M 1058.4 339.076073 
+L 450.1872 339.076073 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #59a333; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_27">
+    <path d="M 1058.4 356.881546 
+L 569.808 356.881546 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3338a3"/>
+   </g>
+   <g id="LineCollection_28">
+    <path d="M 468.72 374.687018 
+L 216 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3933a3"/>
+   </g>
+   <g id="LineCollection_29">
+    <path d="M 889.92 374.687018 
+L 468.72 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3"/>
+   </g>
+   <g id="LineCollection_30">
+    <path d="M 1058.4 374.687018 
+L 889.92 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #9633a3"/>
+   </g>
+   <g id="LineCollection_31">
+    <path d="M 468.72 392.492491 
+L 216 392.492491 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #4033a3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_32">
+    <path d="M 1058.4 392.492491 
+L 468.72 392.492491 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_33">
+    <path d="M 536.112 410.297963 
+L 216 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33"/>
+   </g>
+   <g id="LineCollection_34">
+    <path d="M 704.592 410.297963 
+L 536.112 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #339aa3"/>
+   </g>
+   <g id="LineCollection_35">
+    <path d="M 1024.704 410.297963 
+L 704.592 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a3333d"/>
+   </g>
+   <g id="LineCollection_36">
+    <path d="M 1058.4 410.297963 
+L 1024.704 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33"/>
+   </g>
+   <g id="LineCollection_37">
+    <path d="M 1058.4 428.103436 
+L 451.872 428.103436 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33; stroke-width: 3"/>
+   </g>
+   <g id="LineCollection_38">
+    <path d="M 1058.4 445.908908 
+L 451.872 445.908908 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a3333d; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_39">
+    <path d="M 1058.4 463.714381 
+L 451.872 463.714381 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #33a34a; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_40">
+    <path d="M 1058.4 481.519853 
+L 519.264 481.519853 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a38b33; stroke-width: 1.8"/>
+   </g>
+   <g id="LineCollection_41">
+    <path d="M 1058.4 499.325326 
+L 519.264 499.325326 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #339aa3"/>
+   </g>
+   <g id="LineCollection_42">
+    <path d="M 1058.4 517.130798 
+L 620.352 517.130798 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33"/>
+   </g>
+   <g id="LineCollection_43">
+    <path d="M 721.44 534.936271 
+L 216 534.936271 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #336ea3"/>
+   </g>
+   <g id="LineCollection_44">
+    <path d="M 1058.4 534.936271 
+L 721.44 534.936271 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3"/>
+   </g>
+   <g id="LineCollection_45">
+    <path d="M 1058.4 552.741743 
+L 216 552.741743 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33333"/>
+   </g>
+   <g id="LineCollection_46">
+    <path d="M 468.72 125.410403 
+L 468.72 552.741743 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #336ea3; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_47">
+    <path d="M 468.72 285.659656 
+L 468.72 392.492491 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a37a33; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_48">
+    <path d="M 468.72 285.659656 
+L 468.72 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #3933a3; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_49">
+    <path d="M 536.112 392.492491 
+L 536.112 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a37a33; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_50">
+    <path d="M 586.656 321.270601 
+L 586.656 463.714381 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a38b33; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_51">
+    <path d="M 687.744 89.799458 
+L 687.744 143.215876 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a33333; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_52">
+    <path d="M 704.592 410.297963 
+L 704.592 481.519853 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #339aa3; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_53">
+    <path d="M 721.44 534.936271 
+L 721.44 552.741743 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #336ea3; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_54">
+    <path d="M 805.68 143.215876 
+L 805.68 534.936271 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a33351; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_55">
+    <path d="M 889.92 125.410403 
+L 889.92 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #7133a3; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_56">
+    <path d="M 991.008 89.799458 
+L 991.008 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a33333; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_57">
+    <path d="M 1024.704 161.021348 
+L 1024.704 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a35933; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_58">
+    <path d="M 1024.704 143.215876 
+L 1024.704 178.826821 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #33a349; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_59">
+    <path d="M 1024.704 196.632293 
+L 1024.704 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a35933; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_60">
+    <path d="M 1024.704 214.437766 
+L 1024.704 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a35933; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_61">
+    <path d="M 1024.704 143.215876 
+L 1024.704 250.048711 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #33a349; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_62">
+    <path d="M 1024.704 267.854183 
+L 1024.704 428.103436 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a3333d; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_63">
+    <path d="M 1024.704 410.297963 
+L 1024.704 428.103436 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke-dasharray: 1.2,1.2; stroke-dashoffset: 0; stroke: #a3333d; stroke-opacity: 0.7; stroke-width: 0.6"/>
+   </g>
+   <g id="LineCollection_64">
+    <path d="M 468.72 89.799458 
+L 468.72 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33333; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_65">
+    <path d="M 468.72 267.854183 
+L 468.72 285.659656 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3375a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_66">
+    <path d="M 468.72 125.410403 
+L 468.72 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_67">
+    <path d="M 468.72 125.410403 
+L 468.72 392.492491 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_68">
+    <path d="M 536.112 410.297963 
+L 536.112 481.519853 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #339aa3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_69">
+    <path d="M 586.656 267.854183 
+L 586.656 321.270601 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #3375a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_70">
+    <path d="M 687.744 143.215876 
+L 687.744 534.936271 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a33351; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_71">
+    <path d="M 704.592 410.297963 
+L 704.592 428.103436 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a3333d; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_72">
+    <path d="M 721.44 125.410403 
+L 721.44 534.936271 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_73">
+    <path d="M 805.68 125.410403 
+L 805.68 143.215876 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_74">
+    <path d="M 889.92 232.243238 
+L 889.92 374.687018 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #9633a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_75">
+    <path d="M 991.008 107.604931 
+L 991.008 125.410403 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #6333a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_76">
+    <path d="M 1024.704 143.215876 
+L 1024.704 161.021348 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #33a349; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_77">
+    <path d="M 1024.704 125.410403 
+L 1024.704 178.826821 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #7133a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_78">
+    <path d="M 1024.704 178.826821 
+L 1024.704 196.632293 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a39133; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_79">
+    <path d="M 1024.704 178.826821 
+L 1024.704 214.437766 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a39133; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_80">
+    <path d="M 1024.704 232.243238 
+L 1024.704 250.048711 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #9633a3; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_81">
+    <path d="M 1024.704 250.048711 
+L 1024.704 267.854183 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a38a33; stroke-width: 0.8"/>
+   </g>
+   <g id="LineCollection_82">
+    <path d="M 1024.704 392.492491 
+L 1024.704 410.297963 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #a37a33; stroke-width: 0.8"/>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="103.674618" transform="rotate(-0 219.3696 103.674618)">on 0</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="121.48009" transform="rotate(-0 219.3696 121.48009)">on 101</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="472.0896" y="121.48009" transform="rotate(-0 472.0896 121.48009)">on 0</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="994.3776" y="121.48009" transform="rotate(-0 994.3776 121.48009)">on 70</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="139.285563" transform="rotate(-0 219.3696 139.285563)">on 0</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="691.1136" y="139.285563" transform="rotate(-0 691.1136 139.285563)">on 801</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="809.0496" y="139.285563" transform="rotate(-0 809.0496 139.285563)">on 701</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="157.091035" transform="rotate(-0 219.3696 157.091035)">on 5032</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="174.896508" transform="rotate(-0 219.3696 174.896508)">on 501</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="192.70198" transform="rotate(-0 219.3696 192.70198)">on 5032</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="210.507453" transform="rotate(-0 219.3696 210.507453)">on 5032</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="228.312925" transform="rotate(-0 219.3696 228.312925)">on 701</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="246.118398" transform="rotate(-0 219.3696 246.118398)">on 501</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="455.2416" y="263.92387" transform="rotate(-0 455.2416 263.92387)">on 5901</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="281.729343" transform="rotate(-0 219.3696 281.729343)">on 715</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="472.0896" y="281.729343" transform="rotate(-0 472.0896 281.729343)">on 5913</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="707.9616" y="299.534815" transform="rotate(-0 707.9616 299.534815)">on 5031</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="455.2416" y="317.340288" transform="rotate(-0 455.2416 317.340288)">on 5904</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="590.0256" y="317.340288" transform="rotate(-0 590.0256 317.340288)">on 5913</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="453.5568" y="335.14576" transform="rotate(-0 453.5568 335.14576)">on 5907</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="573.1776" y="352.951233" transform="rotate(-0 573.1776 352.951233)">on 5908</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="370.756705" transform="rotate(-0 219.3696 370.756705)">on 5031</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="472.0896" y="370.756705" transform="rotate(-0 472.0896 370.756705)">on 701</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="893.2896" y="370.756705" transform="rotate(-0 893.2896 370.756705)">on 709</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="388.562178" transform="rotate(-0 219.3696 388.562178)">on 206</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="472.0896" y="388.562178" transform="rotate(-0 472.0896 388.562178)">on 701</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="406.36765" transform="rotate(-0 219.3696 406.36765)">on 715</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="539.4816" y="406.36765" transform="rotate(-0 539.4816 406.36765)">on 5905</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="707.9616" y="406.36765" transform="rotate(-0 707.9616 406.36765)">on 5901</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="455.2416" y="424.173123" transform="rotate(-0 455.2416 424.173123)">on 715</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="455.2416" y="441.978595" transform="rotate(-0 455.2416 441.978595)">on 5901</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="455.2416" y="459.784068" transform="rotate(-0 455.2416 459.784068)">on 5902</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="522.6336" y="477.58954" transform="rotate(-0 522.6336 477.58954)">on 5904</text>
+   </g>
+   <g id="text_67">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="522.6336" y="495.395013" transform="rotate(-0 522.6336 495.395013)">on 5905</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="623.7216" y="513.200485" transform="rotate(-0 623.7216 513.200485)">on 715</text>
+   </g>
+   <g id="text_69">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="531.005958" transform="rotate(-0 219.3696 531.005958)">on 101</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="724.8096" y="531.005958" transform="rotate(-0 724.8096 531.005958)">on 701</text>
+   </g>
+   <g id="text_71">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="219.3696" y="548.81143" transform="rotate(-0 219.3696 548.81143)">on 0</text>
+   </g>
+   <g id="text_72">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #b9853a" x="586.656" y="74.885588" transform="rotate(-0 586.656 74.885588)"> 780 Ma</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 473.471136 315.928959 
+L 463.968864 315.928959 
+Q 463.6656 315.928959 463.6656 322.851727 
+L 463.6656 319.689475 
+Q 463.6656 326.612242 463.968864 326.612242 
+L 473.471136 326.612242 
+Q 473.7744 326.612242 473.7744 319.689475 
+L 473.7744 322.851727 
+Q 473.7744 315.928959 473.471136 315.928959 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 571.189536 120.068761 
+L 403.316064 120.068761 
+Q 403.0128 120.068761 403.0128 126.991529 
+L 403.0128 123.829277 
+Q 403.0128 130.752045 403.316064 130.752045 
+L 571.189536 130.752045 
+Q 571.4928 130.752045 571.4928 123.829277 
+L 571.4928 126.991529 
+Q 571.4928 120.068761 571.189536 120.068761 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #d62a4f; opacity: 0.88; stroke: #d62a4f; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 490.319136 280.318014 
+L 480.816864 280.318014 
+Q 480.5136 280.318014 480.5136 287.240782 
+L 480.5136 284.07853 
+Q 480.5136 291.001297 480.816864 291.001297 
+L 490.319136 291.001297 
+Q 490.6224 291.001297 490.6224 284.07853 
+L 490.6224 287.240782 
+Q 490.6224 280.318014 490.319136 280.318014 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 473.471136 369.345376 
+L 463.968864 369.345376 
+Q 463.6656 369.345376 463.6656 376.268144 
+L 463.6656 373.105892 
+Q 463.6656 380.02866 463.968864 380.02866 
+L 473.471136 380.02866 
+Q 473.7744 380.02866 473.7744 373.105892 
+L 473.7744 376.268144 
+Q 473.7744 369.345376 473.471136 369.345376 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 473.471136 387.150849 
+L 463.968864 387.150849 
+Q 463.6656 387.150849 463.6656 394.073617 
+L 463.6656 390.911365 
+Q 463.6656 397.834132 463.968864 397.834132 
+L 473.471136 397.834132 
+Q 473.7744 397.834132 473.7744 390.911365 
+L 473.7744 394.073617 
+Q 473.7744 387.150849 473.471136 387.150849 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 591.407136 476.178211 
+L 581.904864 476.178211 
+Q 581.6016 476.178211 581.6016 483.100979 
+L 581.6016 479.938727 
+Q 581.6016 486.861495 581.904864 486.861495 
+L 591.407136 486.861495 
+Q 591.7104 486.861495 591.7104 479.938727 
+L 591.7104 483.100979 
+Q 591.7104 476.178211 591.407136 476.178211 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 591.407136 493.983684 
+L 581.904864 493.983684 
+Q 581.6016 493.983684 581.6016 500.906452 
+L 581.6016 497.7442 
+Q 581.6016 504.666967 581.904864 504.666967 
+L 591.407136 504.666967 
+Q 591.7104 504.666967 591.7104 497.7442 
+L 591.7104 500.906452 
+Q 591.7104 493.983684 591.407136 493.983684 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 540.863136 404.956321 
+L 531.360864 404.956321 
+Q 531.0576 404.956321 531.0576 411.879089 
+L 531.0576 408.716837 
+Q 531.0576 415.639605 531.360864 415.639605 
+L 540.863136 415.639605 
+Q 541.1664 415.639605 541.1664 408.716837 
+L 541.1664 411.879089 
+Q 541.1664 404.956321 540.863136 404.956321 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 620.048736 315.928959 
+L 586.959264 315.928959 
+Q 586.656 315.928959 586.656 322.851727 
+L 586.656 319.689475 
+Q 586.656 326.612242 586.959264 326.612242 
+L 620.048736 326.612242 
+Q 620.352 326.612242 620.352 319.689475 
+L 620.352 322.851727 
+Q 620.352 315.928959 620.048736 315.928959 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #3a9d23; opacity: 0.88; stroke: #3a9d23; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 641.951136 511.789156 
+L 632.448864 511.789156 
+Q 632.1456 511.789156 632.1456 518.711924 
+L 632.1456 515.549672 
+Q 632.1456 522.47244 632.448864 522.47244 
+L 641.951136 522.47244 
+Q 642.2544 522.47244 642.2544 515.549672 
+L 642.2544 518.711924 
+Q 642.2544 511.789156 641.951136 511.789156 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 702.603936 137.874234 
+L 649.296864 137.874234 
+Q 648.9936 137.874234 648.9936 144.797002 
+L 648.9936 141.63475 
+Q 648.9936 148.557517 649.296864 148.557517 
+L 702.603936 148.557517 
+Q 702.9072 148.557517 702.9072 141.63475 
+L 702.9072 144.797002 
+Q 702.9072 137.874234 702.603936 137.874234 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #1b9aaa; opacity: 0.88; stroke: #1b9aaa; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 726.191136 298.123486 
+L 716.688864 298.123486 
+Q 716.3856 298.123486 716.3856 305.046254 
+L 716.3856 301.884002 
+Q 716.3856 308.80677 716.688864 308.80677 
+L 726.191136 308.80677 
+Q 726.4944 308.80677 726.4944 301.884002 
+L 726.4944 305.046254 
+Q 726.4944 298.123486 726.191136 298.123486 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8f2bd9; opacity: 0.88; stroke: #8f2bd9; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 700.919136 404.956321 
+L 691.416864 404.956321 
+Q 691.1136 404.956321 691.1136 411.879089 
+L 691.1136 408.716837 
+Q 691.1136 415.639605 691.416864 415.639605 
+L 700.919136 415.639605 
+Q 701.2224 415.639605 701.2224 408.716837 
+L 701.2224 411.879089 
+Q 701.2224 404.956321 700.919136 404.956321 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #7cc43a; opacity: 0.88; stroke: #7cc43a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 726.191136 529.594629 
+L 716.688864 529.594629 
+Q 716.3856 529.594629 716.3856 536.517397 
+L 716.3856 533.355145 
+Q 716.3856 540.277912 716.688864 540.277912 
+L 726.191136 540.277912 
+Q 726.4944 540.277912 726.4944 533.355145 
+L 726.4944 536.517397 
+Q 726.4944 529.594629 726.191136 529.594629 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #8e1537; opacity: 0.88; stroke: #8e1537; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 810.431136 137.874234 
+L 800.928864 137.874234 
+Q 800.6256 137.874234 800.6256 144.797002 
+L 800.6256 141.63475 
+Q 800.6256 148.557517 800.928864 148.557517 
+L 810.431136 148.557517 
+Q 810.7344 148.557517 810.7344 141.63475 
+L 810.7344 144.797002 
+Q 810.7344 137.874234 810.431136 137.874234 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 894.671136 369.345376 
+L 885.168864 369.345376 
+Q 884.8656 369.345376 884.8656 376.268144 
+L 884.8656 373.105892 
+Q 884.8656 380.02866 885.168864 380.02866 
+L 894.671136 380.02866 
+Q 894.9744 380.02866 894.9744 373.105892 
+L 894.9744 376.268144 
+Q 894.9744 369.345376 894.671136 369.345376 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 995.759136 120.068761 
+L 986.256864 120.068761 
+Q 985.9536 120.068761 985.9536 126.991529 
+L 985.9536 123.829277 
+Q 985.9536 130.752045 986.256864 130.752045 
+L 995.759136 130.752045 
+Q 996.0624 130.752045 996.0624 123.829277 
+L 996.0624 126.991529 
+Q 996.0624 120.068761 995.759136 120.068761 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 1043.944416 155.679706 
+L 1029.050784 155.679706 
+Q 1028.74752 155.679706 1028.74752 162.602474 
+L 1028.74752 159.440222 
+Q 1028.74752 166.36299 1029.050784 166.36299 
+L 1043.944416 166.36299 
+Q 1044.24768 166.36299 1044.24768 159.440222 
+L 1044.24768 162.602474 
+Q 1044.24768 155.679706 1043.944416 155.679706 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #e3931b; opacity: 0.88; stroke: #e3931b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 1007.552736 173.485179 
+L 940.767264 173.485179 
+Q 940.464 173.485179 940.464 180.407947 
+L 940.464 177.245695 
+Q 940.464 184.168462 940.767264 184.168462 
+L 1007.552736 184.168462 
+Q 1007.856 184.168462 1007.856 177.245695 
+L 1007.856 180.407947 
+Q 1007.856 173.485179 1007.552736 173.485179 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #e3931b; opacity: 0.88; stroke: #e3931b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 1024.400736 191.290651 
+L 923.919264 191.290651 
+Q 923.616 191.290651 923.616 198.213419 
+L 923.616 195.051167 
+Q 923.616 201.973935 923.919264 201.973935 
+L 1024.400736 201.973935 
+Q 1024.704 201.973935 1024.704 195.051167 
+L 1024.704 198.213419 
+Q 1024.704 191.290651 1024.400736 191.290651 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #3a9d23; opacity: 0.88; stroke: #3a9d23; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 1024.400736 209.096124 
+L 923.919264 209.096124 
+Q 923.616 209.096124 923.616 216.018892 
+L 923.616 212.85664 
+Q 923.616 219.779407 923.919264 219.779407 
+L 1024.400736 219.779407 
+Q 1024.704 219.779407 1024.704 212.85664 
+L 1024.704 216.018892 
+Q 1024.704 209.096124 1024.400736 209.096124 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #3a9d23; opacity: 0.88; stroke: #3a9d23; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 990.704736 244.707069 
+L 940.767264 244.707069 
+Q 940.464 244.707069 940.464 251.629837 
+L 940.464 248.467585 
+Q 940.464 255.390352 940.767264 255.390352 
+L 990.704736 255.390352 
+Q 991.008 255.390352 991.008 248.467585 
+L 991.008 251.629837 
+Q 991.008 244.707069 990.704736 244.707069 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #e3931b; opacity: 0.88; stroke: #e3931b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 1029.455136 262.512541 
+L 1019.952864 262.512541 
+Q 1019.6496 262.512541 1019.6496 269.435309 
+L 1019.6496 266.273057 
+Q 1019.6496 273.195825 1019.952864 273.195825 
+L 1029.455136 273.195825 
+Q 1029.7584 273.195825 1029.7584 266.273057 
+L 1029.7584 269.435309 
+Q 1029.7584 262.512541 1029.455136 262.512541 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 1029.455136 404.956321 
+L 1019.952864 404.956321 
+Q 1019.6496 404.956321 1019.6496 411.879089 
+L 1019.6496 408.716837 
+Q 1019.6496 415.639605 1019.952864 415.639605 
+L 1029.455136 415.639605 
+Q 1029.7584 415.639605 1029.7584 408.716837 
+L 1029.7584 411.879089 
+Q 1029.7584 404.956321 1029.455136 404.956321 
+z
+" clip-path="url(#pa9bd2b8100)" style="fill: #ffffff; stroke-dasharray: 1.8,1.35; stroke-dashoffset: 0; stroke: #c0392b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="LineCollection_83">
+    <path d="M 451.872 314.860631 
+L 451.872 327.680571 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_84">
+    <path d="M 468.72 119.000433 
+L 468.72 131.820373 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_85">
+    <path d="M 468.72 279.249686 
+L 468.72 292.069626 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_86">
+    <path d="M 468.72 368.277048 
+L 468.72 381.096988 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_87">
+    <path d="M 468.72 386.082521 
+L 468.72 398.902461 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_88">
+    <path d="M 519.264 475.109883 
+L 519.264 487.929823 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_89">
+    <path d="M 519.264 492.915356 
+L 519.264 505.735296 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_90">
+    <path d="M 536.112 403.887993 
+L 536.112 416.707933 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_91">
+    <path d="M 586.656 314.860631 
+L 586.656 327.680571 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_92">
+    <path d="M 620.352 510.720828 
+L 620.352 523.540768 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_93">
+    <path d="M 687.744 136.805906 
+L 687.744 149.625846 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_94">
+    <path d="M 704.592 297.055158 
+L 704.592 309.875098 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_95">
+    <path d="M 704.592 403.887993 
+L 704.592 416.707933 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_96">
+    <path d="M 721.44 528.526301 
+L 721.44 541.346241 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_97">
+    <path d="M 805.68 136.805906 
+L 805.68 149.625846 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_98">
+    <path d="M 889.92 368.277048 
+L 889.92 381.096988 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_99">
+    <path d="M 991.008 119.000433 
+L 991.008 131.820373 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_100">
+    <path d="M 1024.704 154.611378 
+L 1024.704 167.431318 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_101">
+    <path d="M 1024.704 172.416851 
+L 1024.704 185.236791 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_102">
+    <path d="M 1024.704 190.222323 
+L 1024.704 203.042263 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_103">
+    <path d="M 1024.704 208.027796 
+L 1024.704 220.847736 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_104">
+    <path d="M 1024.704 243.638741 
+L 1024.704 256.458681 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_105">
+    <path d="M 1024.704 261.444213 
+L 1024.704 274.264153 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="LineCollection_106">
+    <path d="M 1024.704 403.887993 
+L 1024.704 416.707933 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #1d2a33; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_40">
+    <defs>
+     <path id="m77c16961ad" d="M 0 1.5 
+C 0.397805 1.5 0.77937 1.341951 1.06066 1.06066 
+C 1.341951 0.77937 1.5 0.397805 1.5 0 
+C 1.5 -0.397805 1.341951 -0.77937 1.06066 -1.06066 
+C 0.77937 -1.341951 0.397805 -1.5 0 -1.5 
+C -0.397805 -1.5 -0.77937 -1.341951 -1.06066 -1.06066 
+C -1.341951 -0.77937 -1.5 -0.397805 -1.5 0 
+C -1.5 0.397805 -1.341951 0.77937 -1.06066 1.06066 
+C -0.77937 1.341951 -0.397805 1.5 0 1.5 
+z
+" style="stroke: #6f7c84; stroke-width: 0.7"/>
+    </defs>
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="451.872" y="267.854183" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_41">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="704.592" y="303.465128" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_42">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="451.872" y="321.270601" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_43">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="450.1872" y="339.076073" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_44">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="569.808" y="356.881546" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_45">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="451.872" y="428.103436" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_46">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="451.872" y="445.908908" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_47">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="451.872" y="463.714381" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_48">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="519.264" y="481.519853" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_49">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="519.264" y="499.325326" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="line2d_50">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m77c16961ad" x="620.352" y="517.130798" style="fill: #ffffff; stroke: #6f7c84; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_73">
+    <g id="patch_27">
+     <path d="M 475.6056 325.129366 
+L 556.410475 325.129366 
+L 556.410475 318.124054 
+L 475.6056 318.124054 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="476.3016" y="323.227148" transform="rotate(-0 476.3016 323.227148)">1 Hijaz arc domain appears</text>
+   </g>
+   <g id="line2d_51">
+    <defs>
+     <path id="m1d29449771" d="M 0 1.6 
+C 0.424325 1.6 0.831328 1.431414 1.131371 1.131371 
+C 1.431414 0.831328 1.6 0.424325 1.6 0 
+C 1.6 -0.424325 1.431414 -0.831328 1.131371 -1.131371 
+C 0.831328 -1.431414 0.424325 -1.6 0 -1.6 
+C -0.424325 -1.6 -0.831328 -1.431414 -1.131371 -1.131371 
+C -1.431414 -0.831328 -1.6 -0.424325 -1.6 0 
+C -1.6 0.424325 -1.431414 0.831328 -1.131371 1.131371 
+C -0.831328 1.431414 -0.424325 1.6 0 1.6 
+z
+" style="stroke: #1d2a33; stroke-width: 0.7"/>
+    </defs>
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m1d29449771" x="451.872" y="321.270601" style="fill: #ffffff; stroke: #1d2a33; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_74">
+    <g id="patch_28">
+     <path d="M 573.324 129.269169 
+L 706.029812 129.269169 
+L 706.029812 122.263856 
+L 573.324 122.263856 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="574.02" y="127.36695" transform="rotate(-0 574.02 127.36695)">2 Congo rifts from Laurentia (Rodinia break…</text>
+   </g>
+   <g id="text_75">
+    <g id="patch_29">
+     <path d="M 492.4536 289.518421 
+L 624.297569 289.518421 
+L 624.297569 282.513109 
+L 492.4536 282.513109 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="493.1496" y="287.616203" transform="rotate(-0 493.1496 287.616203)">3 Afif arc domain activated; Halaban suturi…</text>
+   </g>
+   <g id="text_76">
+    <g id="patch_30">
+     <path d="M 475.6056 378.545784 
+L 483.766381 378.545784 
+L 483.766381 371.540471 
+L 475.6056 371.540471 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #c0392b" x="476.3016" y="376.643565" transform="rotate(-0 476.3016 376.643565)">4?</text>
+   </g>
+   <g id="text_77">
+    <g id="patch_31">
+     <path d="M 475.6056 396.351256 
+L 483.766381 396.351256 
+L 483.766381 389.345944 
+L 475.6056 389.345944 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #c0392b" x="476.3016" y="394.449038" transform="rotate(-0 476.3016 394.449038)">5?</text>
+   </g>
+   <g id="text_78">
+    <g id="patch_32">
+     <path d="M 593.5416 485.378619 
+L 734.089194 485.378619 
+L 734.089194 478.373306 
+L 593.5416 478.373306 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="594.2376" y="483.4764" transform="rotate(-0 594.2376 483.4764)">6 Egyptian Desert arc/back-arc domain appea…</text>
+   </g>
+   <g id="line2d_52">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m1d29449771" x="519.264" y="481.519853" style="fill: #ffffff; stroke: #1d2a33; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_79">
+    <g id="patch_33">
+     <path d="M 593.5416 503.184091 
+L 681.124319 503.184091 
+L 681.124319 496.178779 
+L 593.5416 496.178779 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="594.2376" y="501.281873" transform="rotate(-0 594.2376 501.281873)">7 Midyan arc domain appears</text>
+   </g>
+   <g id="line2d_53">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m1d29449771" x="519.264" y="499.325326" style="fill: #ffffff; stroke: #1d2a33; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_80">
+    <g id="patch_34">
+     <path d="M 542.9976 414.156729 
+L 551.158381 414.156729 
+L 551.158381 407.151416 
+L 542.9976 407.151416 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #c0392b" x="543.6936" y="412.25451" transform="rotate(-0 543.6936 412.25451)">8?</text>
+   </g>
+   <g id="text_81">
+    <g id="patch_35">
+     <path d="M 622.1832 325.129366 
+L 699.522575 325.129366 
+L 699.522575 318.124054 
+L 622.1832 318.124054 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="622.8792" y="323.227148" transform="rotate(-0 622.8792 323.227148)">9 Bi'r Umq-Nakasib suture</text>
+   </g>
+   <g id="text_82">
+    <g id="patch_36">
+     <path d="M 644.0856 520.989564 
+L 791.008663 520.989564 
+L 791.008663 513.984251 
+L 644.0856 513.984251 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="644.7816" y="519.087345" transform="rotate(-0 644.7816 519.087345)">10 Atmur-Delgo domain appears (accretion com…</text>
+   </g>
+   <g id="line2d_54">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m1d29449771" x="620.352" y="517.130798" style="fill: #ffffff; stroke: #1d2a33; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_83">
+    <g id="patch_37">
+     <path d="M 704.7384 147.074641 
+L 818.1429 147.074641 
+L 818.1429 140.069329 
+L 704.7384 140.069329 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="705.4344" y="145.172423" transform="rotate(-0 705.4344 145.172423)">11 Oman (on India) pole at ca. 726 Ma</text>
+   </g>
+   <g id="text_84">
+    <g id="patch_38">
+     <path d="M 728.3256 307.323894 
+L 810.5551 307.323894 
+L 810.5551 300.318581 
+L 728.3256 300.318581 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="729.0216" y="305.421675" transform="rotate(-0 729.0216 305.421675)">12 Ar Rayn domain appears</text>
+   </g>
+   <g id="line2d_55">
+    <g clip-path="url(#pa9bd2b8100)">
+     <use xlink:href="#m1d29449771" x="704.592" y="303.465128" style="fill: #ffffff; stroke: #1d2a33; stroke-width: 0.7"/>
+    </g>
+   </g>
+   <g id="text_85">
+    <g id="patch_39">
+     <path d="M 703.0536 414.156729 
+L 840.430225 414.156729 
+L 840.430225 407.151416 
+L 703.0536 407.151416 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="703.7496" y="412.25451" transform="rotate(-0 703.7496 412.25451)">13 Midyan-Eastern Desert accretion to the ol…</text>
+   </g>
+   <g id="text_86">
+    <g id="patch_40">
+     <path d="M 728.3256 538.795036 
+L 864.375475 538.795036 
+L 864.375475 531.789724 
+L 728.3256 531.789724 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #1d2a33" x="729.0216" y="536.892818" transform="rotate(-0 729.0216 536.892818)">14 Indo-Antarctica leaves Laurentia (Rodinia…</text>
+   </g>
+   <g id="text_87">
+    <g id="patch_41">
+     <path d="M 812.5656 147.074641 
+L 824.416631 147.074641 
+L 824.416631 140.069329 
+L 812.5656 140.069329 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #c0392b" x="813.2616" y="145.172423" transform="rotate(-0 813.2616 145.172423)">15?</text>
+   </g>
+   <g id="text_88">
+    <g id="patch_42">
+     <path d="M 871.183369 378.545784 
+L 883.0344 378.545784 
+L 883.0344 371.540471 
+L 871.183369 371.540471 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #c0392b" x="882.3384" y="376.643565" transform="rotate(-0 882.3384 376.643565)">16?</text>
+   </g>
+   <g id="text_89">
+    <g id="patch_43">
+     <path d="M 972.271369 129.269169 
+L 984.1224 129.269169 
+L 984.1224 122.263856 
+L 972.271369 122.263856 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #c0392b" x="983.4264" y="127.36695" transform="rotate(-0 983.4264 127.36695)">17?</text>
+   </g>
+   <g id="text_90">
+    <g id="patch_44">
+     <path d="M 887.285851 164.880114 
+L 1026.91632 164.880114 
+L 1026.91632 157.874801 
+L 887.285851 157.874801 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="1026.22032" y="162.977895" transform="rotate(-0 1026.22032 162.977895)">18 Cambrian collision along the Southern Gra…</text>
+   </g>
+   <g id="text_91">
+    <g id="patch_45">
+     <path d="M 861.297956 182.685586 
+L 938.6328 182.685586 
+L 938.6328 175.680274 
+L 861.297956 175.680274 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="937.9368" y="180.783368" transform="rotate(-0 937.9368 180.783368)">19 Malagasy orogeny (74)</text>
+   </g>
+   <g id="text_92">
+    <g id="patch_46">
+     <path d="M 842.111831 200.491059 
+L 921.7848 200.491059 
+L 921.7848 193.485746 
+L 842.111831 193.485746 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="921.0888" y="198.58884" transform="rotate(-0 921.0888 198.58884)">20 Beraketa suture closure</text>
+   </g>
+   <g id="text_93">
+    <g id="patch_47">
+     <path d="M 842.111831 218.296531 
+L 921.7848 218.296531 
+L 921.7848 211.291219 
+L 842.111831 211.291219 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="921.0888" y="216.394313" transform="rotate(-0 921.0888 216.394313)">21 Beraketa suture closure</text>
+   </g>
+   <g id="text_94">
+    <g id="patch_48">
+     <path d="M 814.697675 253.907476 
+L 938.6328 253.907476 
+L 938.6328 246.902164 
+L 814.697675 246.902164 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #1d2a33" x="937.9368" y="252.005258" transform="rotate(-0 937.9368 252.005258)">22 East-West Gondwana terminal suturing</text>
+   </g>
+   <g id="text_95">
+    <g id="patch_49">
+     <path d="M 1005.967369 271.712949 
+L 1017.8184 271.712949 
+L 1017.8184 264.707636 
+L 1005.967369 264.707636 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #c0392b" x="1017.1224" y="269.81073" transform="rotate(-0 1017.1224 269.81073)">23?</text>
+   </g>
+   <g id="text_96">
+    <g id="patch_50">
+     <path d="M 1005.967369 414.156729 
+L 1017.8184 414.156729 
+L 1017.8184 407.151416 
+L 1005.967369 407.151416 
+z
+" style="fill: #ffffff; opacity: 0.75"/>
+    </g>
+    <text style="font-style: italic; font-size: 5.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #c0392b" x="1017.1224" y="412.25451" transform="rotate(-0 1017.1224 412.25451)">24?</text>
+   </g>
+   <g id="line2d_56">
+    <path d="M 586.656 563.425027 
+L 586.656 75.55508 
+" clip-path="url(#pa9bd2b8100)" style="fill: none; stroke: #b9853a; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_51">
+    <path d="M 687.744 586.451337 
+L 216 586.451337 
+L 216 570.620749 
+L 687.744 570.620749 
+z
+" clip-path="url(#p55610c3022)" style="fill: #feb342"/>
+   </g>
+   <g id="patch_52">
+    <path d="M 830.952 586.451337 
+L 687.744 586.451337 
+L 687.744 570.620749 
+L 830.952 570.620749 
+z
+" clip-path="url(#p55610c3022)" style="fill: #febf4e"/>
+   </g>
+   <g id="patch_53">
+    <path d="M 993.02976 586.451337 
+L 830.952 586.451337 
+L 830.952 570.620749 
+L 993.02976 570.620749 
+z
+" clip-path="url(#p55610c3022)" style="fill: #fed379"/>
+   </g>
+   <g id="patch_54">
+    <path d="M 1058.4 586.451337 
+L 993.02976 586.451337 
+L 993.02976 570.620749 
+L 1058.4 570.620749 
+z
+" clip-path="url(#p55610c3022)" style="fill: #7fa056"/>
+   </g>
+   <g id="line2d_57">
+    <path d="M 216 586.451337 
+L 216 570.620749 
+" clip-path="url(#p55610c3022)" style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_58">
+    <path d="M 687.744 586.451337 
+L 687.744 570.620749 
+" clip-path="url(#p55610c3022)" style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_59">
+    <path d="M 830.952 586.451337 
+L 830.952 570.620749 
+" clip-path="url(#p55610c3022)" style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_60">
+    <path d="M 993.02976 586.451337 
+L 993.02976 570.620749 
+" clip-path="url(#p55610c3022)" style="fill: none; stroke: #ffffff; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_97">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1d2a33" x="451.872" y="580.467605" transform="rotate(-0 451.872 580.467605)">Tonian</text>
+   </g>
+   <g id="text_98">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1d2a33" x="759.348" y="580.467605" transform="rotate(-0 759.348 580.467605)">Cryogenian</text>
+   </g>
+   <g id="text_99">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1d2a33" x="911.99088" y="580.467605" transform="rotate(-0 911.99088 580.467605)">Ediacaran</text>
+   </g>
+   <g id="text_100">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #1d2a33" x="1025.71488" y="580.467605" transform="rotate(-0 1025.71488 580.467605)">Cambrian</text>
+   </g>
+   <g id="text_101">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #6f7c84" x="637.2" y="606.397694" transform="rotate(-0 637.2 606.397694)">Age (Ma) · older → younger</text>
+   </g>
+   <g id="line2d_61">
+    <path d="M 586.656 586.451337 
+L 586.656 570.620749 
+" clip-path="url(#p55610c3022)" style="fill: none; stroke: #b9853a; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_102">
+   <text style="font-size: 11px; font-family: 'DejaVu Serif', 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook', 'Century Schoolbook L', 'Utopia', 'ITC Bookman', 'Bookman', 'Nimbus Roman No9 L', 'Times New Roman', 'Times', 'Palatino', 'Charter', serif; text-anchor: start; fill: #1d2a33" x="10.8" y="15.554003" transform="rotate(-0 10.8 15.554003)">Merdith et al. (2021) — Arabian-Nubian Shield and Azania handoffs, 1000–500 Ma</text>
+  </g>
+  <g id="text_103">
+   <text style="font-size: 6.8px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start; fill: #6f7c84" x="10.8" y="31.071536" transform="rotate(-0 10.8 31.071536)">1000_0_rotfile_Merdith_et_al.handoff_evidence.csv · 72 handoff(s) in 1000–500 Ma: 17 with evidence, 55 gap(s); 1 unmatched sidecar row(s); 14 warning(s); 0 unreadable row(s)</text>
+  </g>
+  <g id="text_104">
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 636.06926)">[1] 860 Ma · 5907 OMB Hijaz-Omani Basement appears on 5904</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 642.589979)">      Hijaz arc domain appears (emergence) · 850 Ma · Hijaz arc-domain geometry is valid from 850 Ma in Merdith v1.1b (ANS-GC1 domain_age_ledger; native domain age, not</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 649.266448)">        subaerial emergence); the hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) shows juvenile arc crust (purple) on the Hijaz &amp; Gebeit-Gabgaba row at ca.</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 655.942916)">        853-824 Ma. · ref: Merdith et al. (2021), Earth-Science Reviews 214, 103477, https://doi.org/10.1016/j.earscirev.2020.103477 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 662.502135)">[2] 850 Ma · 701 070 Africa-longitude corr…: 101 → 0</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 669.061354)">      Congo rifts from Laurentia (Rodinia breakup) (rifting) · 839 ± 50 Ma · The hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) draws rifting (crimson) on</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 675.737823)">        the Congo north/east-margin rows at ca. 889-789 Ma and on its southern and eastern margins at ca. 820-729 Ma; the model releases Congo from Laurentia into the spin-</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 682.297041)">        axis frame at 850 Ma. · ref: none given · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 688.85626)">[3] 850 Ma · 5031 OMB Afif Terrane-Omani Ba…: 715 → 5913</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 695.376979)">      Afif arc domain activated; Halaban suturing comes later (emergence) · 840 Ma · The Afif Terrane arc-domain feature becomes valid at 840 Ma in the Merdith v1.1b geometry</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 701.936198)">        (ANS-GC1 domain_age_ledger: a model-feature activation, not subaerial emergence). The hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) shows arc</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 708.612666)">        crust (pink) on Afif-Abas at ca. 848-819 Ma and its Halaban suturing (54) only at ca. 680-617 Ma, which this model does not encode as a handoff. · ref: Merdith et al.</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 715.171885)">        (2021), Earth-Science Reviews 214, 103477, https://doi.org/10.1016/j.earscirev.2020.103477 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 721.731104)">[4] 850 Ma · 5032 SOM Azania-Somalia: 5031 → 701 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 728.251823)">[5] 850 Ma · 715 AFR Northeast Africa-Afri…: 206 → 701 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 734.772541)">[6] 820 Ma · 5905 SMC Egyptian Desert-Sahar… appears on 5904</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 741.33176)">      Egyptian Desert arc/back-arc domain appears (emergence) · 780 Ma · Egyptian Desert domain is valid from 780 Ma in Merdith v1.1b (ANS-GC1 domain_age_ledger; not literal</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 748.008229)">        subaerial emergence) while its rotation sequence starts at 820 Ma. The hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) shows juvenile arc crust</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 754.684698)">        (purple) on the Midyan &amp; Egyptian Desert row at ca. 780-751 Ma. · ref: Merdith et al. (2021), Earth-Science Reviews 214, 103477,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 761.243916)">        https://doi.org/10.1016/j.earscirev.2020.103477 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 767.803135)">[7] 820 Ma · 5906 OMB Midyan-Omani Basement appears on 5905</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 774.323854)">      Midyan arc domain appears (emergence) · 780 Ma · Midyan domain is valid from 780 Ma in Merdith v1.1b (ANS-GC1 domain_age_ledger; native domain age, not subaerial</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 781.000323)">        emergence) while its rotation sequence starts at 820 Ma. · ref: Merdith et al. (2021), Earth-Science Reviews 214, 103477,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 787.559541)">        https://doi.org/10.1016/j.earscirev.2020.103477 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 794.11876)">[8] 810 Ma · 508 ARB Sinai-Arabia: 715 → 5905 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 800.639479)">[9] 780 Ma · 5907 OMB Hijaz-Omani Basement: 5904 → 5913</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 807.160198)">      Bi'r Umq-Nakasib suture (suture) · 770 ± 10 Ma · Accretion boxes 41 (Bi'r Umq) and 42 (Nakasib) on the Jiddah and Hijaz rows of the hand-drawn Neoproterozoic cladogram</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 813.719416)">        (Neoprot_cladogram_June29.pdf) span ca. 781-760 Ma; the model moves Hijaz from Gebeit/Gabgaba onto Jiddah at 780 Ma. · ref: none given · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 820.395885)">[10] 760 Ma · 5903 SMC Atmur-Delgo-Sahara Me… appears on 715</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 826.955104)">      Atmur-Delgo domain appears (accretion comes later) (emergence) · 750 Ma · Atmur-Delgo domain is valid from 750 Ma in Merdith v1.1b (ANS-GC1 domain_age_ledger). The hand-</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 833.631573)">        drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) puts its accretion (46, Atmur-Delgo) at ca. 721-700 Ma, but the model keeps it fixed to Northeast Africa</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 840.308041)">        throughout, so that later collision has no handoff. · ref: Merdith et al. (2021), Earth-Science Reviews 214, 103477, https://doi.org/10.1016/j.earscirev.2020.103477 ·</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 846.86726)">        confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 853.387979)">[11] 720 Ma · 501 CIB India Craton-Central …: 0 → 801</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 859.908698)">      Oman (on India) pole at ca. 726 Ma (paleomagnetic constraint) · 727 ± 16 Ma · Swanson-Hysell et al. (2025) place Oman (Shaat/Zalawt) at 37.5 +/- 2.5 N at ca. 726 Ma</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 866.467916)">        (window 743-711 Ma, ANS-CON-0005). Native Merdith 2021 reconstructs the site on Oman plate 503, carried by India, at 25.98 N (residual -11.52 deg), so the frame India</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 873.027135)">        enters at 720 Ma does not satisfy this constraint. · ref: Swanson-Hysell et al. (2025), Geology, https://doi.org/10.1130/G53450.1 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 879.586354)">[12] 710 Ma · 5912 AFT Ar Rayn-Afif Abas appears on 5031</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 886.107073)">      Ar Rayn domain appears (emergence) · 700 Ma · Ar Rayn domain is valid from 700 Ma in Merdith v1.1b (ANS-GC1 domain_age_ledger; native domain age, not subaerial</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 892.783541)">        emergence) while its rotation sequence starts at 710 Ma. · ref: Merdith et al. (2021), Earth-Science Reviews 214, 103477,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 899.34276)">        https://doi.org/10.1016/j.earscirev.2020.103477 · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 905.901979)">[13] 710 Ma · 508 ARB Sinai-Arabia: 5905 → 5901</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 912.422698)">      Midyan-Eastern Desert accretion to the older kernel (accretion) · 715 Ma · Collins et al. (2021) discuss ca. 715 Ma Midyan-Eastern Desert accretion to the older kernel</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 918.943416)">        (ANS-GC1 README). The hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) draws accretion 44-46 (Yanbu, Allaqi, Atmur-Delgo) at ca. 721-700 Ma on the</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 925.619885)">        Midyan &amp; Egyptian Desert row. · ref: Collins et al. (2021), Communications Earth &amp; Environment, https://doi.org/10.1038/s43247-021-00149-z · confidence medium</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 932.179104)">[14] 700 Ma · 801 ANT Australia-Antarctica: 101 → 701</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 938.699823)">      Indo-Antarctica leaves Laurentia (Rodinia breakup) (breakup) · 700 Ma · In the top panel of the hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) the</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 945.376291)">        Indo-Antarctica line leaves the Laurentia line at a stop at ca. 700 Ma; the model moves Australia-Antarctica from Laurentia to the Congo frame at 700 Ma. · ref: none</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 951.93551)">        given · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 958.494729)">[15] 650 Ma · 501 CIB India Craton-Central …: 801 → 701 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 965.015448)">[16] 600 Ma · 5032 SOM Azania-Somalia: 701 → 709 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 971.536166)">[17] 540 Ma · 701 070 Africa-longitude corr…: 0 → 70 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 978.095385)">[18] 520 Ma · 5014 IND Southern Granulite Te…: 5032 → 501</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 984.616104)">      Cambrian collision along the Southern Granulite Terrane (collision) · 513 ± 4.6 Ma · A 513 +/- 4.6 Ma metamorphic zircon population in the Manamedu plagiogranite records</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 991.175323)">        a Cambrian collision to post-collisional tectonothermal event (ANS-CON-0024). · ref: Santosh et al. (2012), Precambrian Research 192-195, 190-208,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 997.696041)">        https://doi.org/10.1016/j.precamres.2011.10.025 · confidence medium</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1004.25526)">[19] 520 Ma · 702 AFR Madagascar-Africa: 501 → 701</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1010.814479)">      Malagasy orogeny (74) (collision) · 550 ± 20 Ma · Terminal collision box 74 (Malagasy, orange) on the Antongil (India) and Azania rows of the hand-drawn Neoproterozoic</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1017.373698)">        cladogram (Neoprot_cladogram_June29.pdf) spans ca. 570-530 Ma. · ref: none given · confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1024.050166)">[20] 520 Ma · 77021 Central Madagascar-Madaga…: 5032 → 702</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1030.609385)">      Beraketa suture closure (suture) · 550 ± 30 Ma · Same 580-520 Ma Beraketa suture window (ANS-CON-0023); Central Madagascar is not itself the Anosyen domain, so the link</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1037.168604)">        to this handoff is weaker than for Southern Madagascar. · ref: Boger et al. (2015), Gondwana Research 28(3), 1048-1060, https://doi.org/10.1016/j.gr.2014.08.017 ·</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1043.727823)">        confidence low</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1050.248541)">[21] 520 Ma · 77022 Southern Madagascar-Madag…: 5032 → 702</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1056.80776)">      Beraketa suture closure (suture) · 550 ± 30 Ma · Closure of the Beraketa suture and final assembly between the western ANS-affinity and eastern India-affinity (Anosyen)</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1063.328479)">        domains of Madagascar, bracketed 580-520 Ma by SHRIMP ages (ANS-CON-0023). · ref: Boger et al. (2015), Gondwana Research 28(3), 1048-1060,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1069.887698)">        https://doi.org/10.1016/j.gr.2014.08.017 · confidence medium</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1076.446916)">[22] 520 Ma · 503 SOM Arabia-Somalia: 501 → 709</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1082.967635)">      East-West Gondwana terminal suturing (collision) · 555 ± 15 Ma · Final East-West Gondwana assembly within a broad terminal Ediacaran window, 570-540 Ma, not to be</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1089.526854)">        conflated with earlier internal ANS sutures (ANS-CON-0006). The hand-drawn Neoproterozoic cladogram (Neoprot_cladogram_June29.pdf) draws the terminal Malagasy (74) and</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1096.203323)">        Arabian-Mozambique (135) collision (orange) on the Oman row at ca. 570-530 Ma. · ref: Johnson et al. (2011), Journal of African Earth Sciences 61(3), 167-232,</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1102.762541)">        https://doi.org/10.1016/j.jafrearsci.2011.07.003; Stern et al. (2012), Precambrian Research 206-207, 159-167, https://doi.org/10.1016/j.precamres.2012.02.008 ·</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1109.32176)">        confidence medium</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1115.842479)">[23] 520 Ma · 5913 OMB Jiddah-Omani Basement: 5901 → 503 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1122.363198)">[24] 520 Ma · 508 ARB Sinai-Arabia: 5901 → 715 · GAP — no evidence recorded</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1128.883916)"/>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1135.404635)">Sidecar rows that match no handoff in the rotation file:</text>
+   <text style="font-size: 5.6px; font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; fill: #1d2a33" transform="translate(21.6 1141.925354)">  row 12: Allaqi-Heiani suture: ophiolite emplaced before 709 Ma — plate 5905 hands off at 410 Ma; none within ±0.5 Myr of 709 Ma</text>
+  </g>
+  <g id="legend_1">
+   <g id="patch_55">
+    <path d="M 222.3 47.597516 
+L 233.5 47.597516 
+L 233.5 42.697516 
+L 222.3 42.697516 
+z
+" style="fill: #d62a4f"/>
+   </g>
+   <g id="text_105">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="239.1" y="47.597516" transform="rotate(-0 239.1 47.597516)">rifting</text>
+   </g>
+   <g id="patch_56">
+    <path d="M 222.3 57.872203 
+L 233.5 57.872203 
+L 233.5 52.972203 
+L 222.3 52.972203 
+z
+" style="fill: #8e1537"/>
+   </g>
+   <g id="text_106">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="239.1" y="57.872203" transform="rotate(-0 239.1 57.872203)">breakup</text>
+   </g>
+   <g id="patch_57">
+    <path d="M 275.975781 47.597516 
+L 287.175781 47.597516 
+L 287.175781 42.697516 
+L 275.975781 42.697516 
+z
+" style="fill: #e3931b"/>
+   </g>
+   <g id="text_107">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="292.775781" y="47.597516" transform="rotate(-0 292.775781 47.597516)">collision</text>
+   </g>
+   <g id="patch_58">
+    <path d="M 275.975781 57.872203 
+L 287.175781 57.872203 
+L 287.175781 52.972203 
+L 275.975781 52.972203 
+z
+" style="fill: #3a9d23"/>
+   </g>
+   <g id="text_108">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="292.775781" y="57.872203" transform="rotate(-0 292.775781 57.872203)">suture</text>
+   </g>
+   <g id="patch_59">
+    <path d="M 329.4525 47.597516 
+L 340.6525 47.597516 
+L 340.6525 42.697516 
+L 329.4525 42.697516 
+z
+" style="fill: #7cc43a"/>
+   </g>
+   <g id="text_109">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="346.2525" y="47.597516" transform="rotate(-0 346.2525 47.597516)">accretion</text>
+   </g>
+   <g id="patch_60">
+    <path d="M 329.4525 57.872203 
+L 340.6525 57.872203 
+L 340.6525 52.972203 
+L 329.4525 52.972203 
+z
+" style="fill: #8f2bd9"/>
+   </g>
+   <g id="text_110">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="346.2525" y="57.872203" transform="rotate(-0 346.2525 57.872203)">emergence</text>
+   </g>
+   <g id="patch_61">
+    <path d="M 394.183906 47.597516 
+L 405.383906 47.597516 
+L 405.383906 42.697516 
+L 394.183906 42.697516 
+z
+" style="fill: #1b9aaa"/>
+   </g>
+   <g id="text_111">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="410.983906" y="47.597516" transform="rotate(-0 410.983906 47.597516)">paleomagnetic constraint</text>
+   </g>
+   <g id="patch_62">
+    <path d="M 508.962031 47.597516 
+L 520.162031 47.597516 
+L 520.162031 42.697516 
+L 508.962031 42.697516 
+z
+" style="fill: #ffffff; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #c0392b; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_112">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="525.762031" y="47.597516" transform="rotate(-0 525.762031 47.597516)">gap: no evidence</text>
+   </g>
+   <g id="line2d_62">
+    <path d="M 594.604844 45.147516 
+L 600.204844 45.147516 
+L 605.804844 45.147516 
+" style="fill: none; stroke: #6f7c84; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="text_113">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="611.404844" y="47.597516" transform="rotate(-0 611.404844 47.597516)">major plate</text>
+   </g>
+   <g id="line2d_63">
+    <path d="M 659.972813 45.147516 
+L 665.572813 45.147516 
+L 671.172813 45.147516 
+" style="fill: none; stroke: #6f7c84; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_114">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="676.772812" y="47.597516" transform="rotate(-0 676.772812 47.597516)">intermediate plate</text>
+   </g>
+   <g id="line2d_64">
+    <path d="M 750.17 45.147516 
+L 755.77 45.147516 
+L 761.37 45.147516 
+" style="fill: none; stroke: #6f7c84; stroke-linecap: square"/>
+   </g>
+   <g id="text_115">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="766.97" y="47.597516" transform="rotate(-0 766.97 47.597516)">minor plate</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa9bd2b8100">
+   <rect x="216" y="75.55508" width="842.4" height="487.869947"/>
+  </clipPath>
+  <clipPath id="p55610c3022">
+   <rect x="216" y="570.620749" width="842.4" height="15.830588"/>
+  </clipPath>
+ </defs>
+</svg>

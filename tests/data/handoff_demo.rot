@@ -1,0 +1,13 @@
+! synthetic model for the handoff-evidence tests; not palaeogeography
+101 0.0 90.0 0.0 0.0 000 !LAU Laurentia
+101 1100.0 10.0 20.0 30.0 000 !LAU Laurentia
+701 0.0 90.0 0.0 0.0 000 !CON Congo
+701 1100.0 -10.0 40.0 50.0 000 !CON Congo
+201 0.0 90.0 0.0 0.0 701 !AMA Amazonia
+201 600.0 5.0 5.0 10.0 701 !AMA Amazonia on Congo
+201 600.0 6.0 6.0 11.0 101 !AMA Amazonia on Laurentia
+201 1100.0 7.0 7.0 20.0 101 !AMA Amazonia on Laurentia
+5901 0.0 90.0 0.0 0.0 201 !ARC Juvenile arc
+5901 780.0 3.0 3.0 4.0 201 !ARC Juvenile arc accreted to Amazonia
+5901 780.0 3.0 3.0 4.5 701 !ARC Juvenile arc riding Congo
+5901 860.0 3.0 3.0 6.0 701 !ARC Juvenile arc riding Congo
