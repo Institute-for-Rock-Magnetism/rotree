@@ -1,4 +1,4 @@
-<img src="docs/assets/logo.svg" alt="rotree logo" width="96" align="right">
+<p><img src="docs/assets/logo.svg" alt="rotree logo" width="96"></p>
 
 # rotree
 
