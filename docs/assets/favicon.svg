@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">rotree icon</title>
+  <desc id="desc">A plate-rotation tree with three Julia-colored leaf nodes on a softly shaded tile.</desc>
+  <defs>
+    <linearGradient id="tile" x2="0.8" y2="1">
+      <stop stop-color="#ffffff"/><stop offset="1" stop-color="#edf2f8"/>
+    </linearGradient>
+    <linearGradient id="green" x2="0.8" y2="1">
+      <stop stop-color="#75bd62"/><stop offset="1" stop-color="#389826"/>
+    </linearGradient>
+    <linearGradient id="purple" x2="0.8" y2="1">
+      <stop stop-color="#be94d0"/><stop offset="1" stop-color="#9558B2"/>
+    </linearGradient>
+    <linearGradient id="red" x2="0.8" y2="1">
+      <stop stop-color="#e37e77"/><stop offset="1" stop-color="#CB3C33"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect x="36" y="36" width="440" height="440" rx="88" fill="url(#tile)"/>
+  <rect x="36" y="36" width="440" height="440" rx="88" fill="none" stroke="#e2e8f0" stroke-width="10"/>
+  <g filter="url(#shadow)">
+    <path d="M120 256 H194 M194 144 V326 M194 144 H368 M194 326 H272 M272 256 V368 M272 256 H368 M272 368 H368" fill="none" stroke="#1e293b" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="120" cy="256" r="20" fill="#4063D8" stroke="#ffffff" stroke-width="8"/>
+    <circle cx="194" cy="256" r="13" fill="#1e293b"/>
+    <circle cx="272" cy="326" r="13" fill="#1e293b"/>
+    <circle cx="368" cy="144" r="34" fill="url(#green)" stroke="#ffffff" stroke-width="10"/>
+    <circle cx="368" cy="256" r="34" fill="url(#purple)" stroke="#ffffff" stroke-width="10"/>
+    <circle cx="368" cy="368" r="34" fill="url(#red)" stroke="#ffffff" stroke-width="10"/>
+  </g>
+</svg>

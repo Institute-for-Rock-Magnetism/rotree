@@ -1,3 +1,5 @@
+<img src="docs/assets/logo.svg" alt="rotree logo" width="96" align="right">
+
 # rotree
 
 Cladogram visualization of the plate-rotation hierarchy in any
